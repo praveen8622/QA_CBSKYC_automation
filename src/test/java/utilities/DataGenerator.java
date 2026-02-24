@@ -49,11 +49,15 @@ public class DataGenerator {
 
     public static String generateRandomfirstName() {
         String firstName = faker.name().firstName();
+        // Remove any non-alphabetic characters
+        firstName = firstName.replaceAll("[^a-zA-Z]", "");
         return firstName;
     }
 
     public static String generateRandomlastName() {
         String lastName = faker.name().lastName();
+        // Remove any non-alphabetic characters
+        lastName = lastName.replaceAll("[^a-zA-Z]", "");
         return lastName;
     }
 

@@ -216,6 +216,6 @@ public class CustIdentityPage extends BasePage {
 
 	public boolean isIdentityFormVisible() {
 		LoggerUtil.info("Checking if Add Identity form is visible");
-		return wait.waitForElementToBeVisible(identityTypeDropdownLocator).isDisplayed();
+		return isElementVisible(identityTypeDropdownLocator);
 	}
 }
