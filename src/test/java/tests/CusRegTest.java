@@ -12,8 +12,8 @@ import workflows.KycWorkflow;
 public class CusRegTest extends BaseTestSequential {
 
 	private KycWorkflow kyc;
-	private String testImagePath = "C:\\Users\\Praveen_Vortex\\eclipse-workspace\\KYC_Cus_Reg\\src\\test\\resources\\testimages\\testdoc.jpg";
-	private String profileImagePath = "C:\\Users\\Praveen_Vortex\\eclipse-workspace\\KYC_Cus_Reg\\src\\test\\resources\\testimages\\profile.jpg";
+	private String testImagePath = "testimages/testdoc.jpg";
+	private String profileImagePath = "testimages/profile.jpg";
 
 	// private String editCustomerName = "PRAKASH BAHADUR KARKI";
 	@BeforeClass

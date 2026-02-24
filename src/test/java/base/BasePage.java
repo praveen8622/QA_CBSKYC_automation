@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
 
+import utilities.FileUtil;
 import utilities.LoggerUtil;
 import utilities.WaitUtils;
 
@@ -201,8 +202,12 @@ public class BasePage {
 	// ================================
 	// File Upload
 	// ================================
-	protected void uploadFile(By locator, String filePath) {
+	protected void uploadFile(By locator, String relativePath) {
 		try {
+			// Get absolute path from resources
+			String filePath = FileUtil.getFileFromResources(relativePath);
+			// Validate file exists
+			FileUtil.validateFileExists(filePath);
 			WebElement element = wait.waitForElementToBePresent(locator);
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].removeAttribute('style');", element);

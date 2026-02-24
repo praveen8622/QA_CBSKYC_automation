@@ -131,7 +131,7 @@ public class KycWorkflow {
         custRegHomePage.searchAndEditDraftCustomer(fullName);
     }
 
-    public void fillIdentityDetails(String licenseNumber, String filePath) throws InterruptedException {
+    public void fillIdentityDetails(String licenseNumber, String relativePath) throws InterruptedException {
         custRegHomePage.navigateToIdentityTab();
         identityPage.openAddIdentityForm();
         Thread.sleep(1000);
@@ -142,7 +142,7 @@ public class KycWorkflow {
         Thread.sleep(1000);
         identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
         Thread.sleep(1000);
-        identityPage.uploadIdentityDocument(filePath);
+        identityPage.uploadIdentityDocument(relativePath);
         Thread.sleep(1000);
         identityPage.clickSaveIdentity();
         Thread.sleep(1000);
@@ -168,19 +168,19 @@ public class KycWorkflow {
         Thread.sleep(1000);
     }
 
-    public void fillDocumentDetails(String passportNumber, String filePath) throws InterruptedException {
+    public void fillDocumentDetails(String passportNumber, String relativePath) throws InterruptedException {
         custRegHomePage.navigateToDocumentTab();
         documentPage.clickAddDocument();
         documentPage.selectDocumentType("Passport");
         documentPage.enterDocumentTitle("Passport");
         documentPage.enterDocumentNumber(passportNumber);
         Thread.sleep(1000);
-        documentPage.uploadDocument(filePath);
+        documentPage.uploadDocument(relativePath);
         documentPage.clickSave();
         Thread.sleep(1000);
     }
 
-    public void fillAddressDetails(String filePath) throws InterruptedException {
+    public void fillAddressDetails(String relativePath) throws InterruptedException {
         custRegHomePage.navigateToAddressTab();
         addressPage.openAddAddressForm();
         Thread.sleep(1000);
@@ -204,7 +204,7 @@ public class KycWorkflow {
         Thread.sleep(1000);
         addressPage.enterLongitude("123");
         Thread.sleep(1000);
-        addressPage.uploadAddressDocument(filePath);
+        addressPage.uploadAddressDocument(relativePath);
         Thread.sleep(1000);
         addressPage.clickSave();
         Thread.sleep(1000);
@@ -316,7 +316,7 @@ public class KycWorkflow {
         Thread.sleep(2000);
     }
 
-    public void fillRelationshipIdentityDetails(String licenseNumber, String filePath) throws InterruptedException {
+    public void fillRelationshipIdentityDetails(String licenseNumber, String relativePath) throws InterruptedException {
         relationshipIdentityPage.clickIdentityTab();
         Thread.sleep(1000);
         relationshipIdentityPage.clickAddIdentity();
@@ -329,7 +329,7 @@ public class KycWorkflow {
         Thread.sleep(1000);
         relationshipIdentityPage.handleExpiryDateIfApplicable("2031", "January", "1");
         Thread.sleep(1000);
-        relationshipIdentityPage.uploadDocument(filePath);
+        relationshipIdentityPage.uploadDocument(relativePath);
         Thread.sleep(1000);
         relationshipIdentityPage.clickSave();
         Thread.sleep(2000);
@@ -352,7 +352,7 @@ public class KycWorkflow {
         Thread.sleep(2000);
     }
 
-    public void fillRelationshipDocumentDetails(String docNumber, String filePath) throws InterruptedException {
+    public void fillRelationshipDocumentDetails(String docNumber, String relativePath) throws InterruptedException {
         relationshipDocumentPage.clickDocumentTab();
         Thread.sleep(1000);
         relationshipDocumentPage.clickAddDocument();
@@ -365,7 +365,7 @@ public class KycWorkflow {
         Thread.sleep(1000);
         relationshipDocumentPage.selectMimeType("image/png");
         Thread.sleep(1000);
-        relationshipDocumentPage.uploadDocument(filePath);
+        relationshipDocumentPage.uploadDocument(relativePath);
         Thread.sleep(1000);
         relationshipDocumentPage.clickSave();
         Thread.sleep(2000);
@@ -404,10 +404,10 @@ public class KycWorkflow {
         Thread.sleep(2000);
     }
 
-    public void fillRelationshipPhoto(String filePath) throws InterruptedException {
+    public void fillRelationshipPhoto(String relativePath) throws InterruptedException {
         relationshipPhotoPage.clickPhotoTab();
         Thread.sleep(1000);
-        // relationshipPhotoPage.uploadPhoto(filePath);
+        // relationshipPhotoPage.uploadPhoto(relativePath);
         // Thread.sleep(1000);
         // relationshipPhotoPage.clickSaveButton();
         // Thread.sleep(2000);

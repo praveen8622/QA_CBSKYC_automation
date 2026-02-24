@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite">
+    <listeners>
+        <listener class-name="utilities.AllureListener"/>
+    </listeners>
     <test name="Chrome Test">
         <classes>
             <class name="tests.CusRegTest"/>

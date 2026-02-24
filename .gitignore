@@ -20,6 +20,7 @@ bin/
 *.java.typeAnnotations
 .apt_generated
 .apt_generated_tests
+.factorypath
 
 # IntelliJ IDEA
 .idea/
@@ -35,6 +36,12 @@ logs/
 # TestNG
 test-output/
 
+# Allure
+.allure/
+allure-results/
+allure-report/
+
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini

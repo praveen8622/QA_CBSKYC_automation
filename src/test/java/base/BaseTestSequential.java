@@ -56,4 +56,8 @@ public class BaseTestSequential {
             driver.quit();
         }
     }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
 }

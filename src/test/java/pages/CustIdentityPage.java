@@ -181,9 +181,9 @@ public class CustIdentityPage extends BasePage {
 	// Document Upload
 	// =================================================
 
-	public void uploadIdentityDocument(String filePath) {
-		LoggerUtil.info("Uploading Identity Document from path: " + filePath);
-		uploadFile(documentUploadInputLocator, filePath);
+	public void uploadIdentityDocument(String relativePath) {
+		LoggerUtil.info("Uploading Identity Document from path: " + relativePath);
+		uploadFile(documentUploadInputLocator, relativePath);
 	}
 
 	// =================================================
