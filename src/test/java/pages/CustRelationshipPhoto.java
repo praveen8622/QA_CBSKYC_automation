@@ -17,7 +17,7 @@ public class CustRelationshipPhoto extends BasePage {
     private By nextButton = By.xpath("//button[@title='Next Step']");
 
     public void clickPhotoTab() {
-        LoggerUtil.info("Clicking Identity tab");
+        LoggerUtil.info("Clicking Photo tab");
         click(photoTabLocator);
     }
 

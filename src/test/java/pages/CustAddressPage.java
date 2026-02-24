@@ -125,7 +125,7 @@ public class CustAddressPage extends BasePage {
 
     public void uploadAddressDocument(String filePath) {
         LoggerUtil.info("Uploading Address Document from path: " + filePath);
-        driver.findElement(imageUploadInputLocator).sendKeys(filePath);
+        uploadFile(imageUploadInputLocator, filePath);
     }
 
     public void clickSave() {

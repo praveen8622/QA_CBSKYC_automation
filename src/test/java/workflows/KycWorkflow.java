@@ -407,12 +407,12 @@ public class KycWorkflow {
     public void fillRelationshipPhoto(String relativePath) throws InterruptedException {
         relationshipPhotoPage.clickPhotoTab();
         Thread.sleep(1000);
-        // relationshipPhotoPage.uploadPhoto(relativePath);
-        // Thread.sleep(1000);
-        // relationshipPhotoPage.clickSaveButton();
-        // Thread.sleep(2000);
-        relationshipPhotoPage.clickCloseButton();
+        relationshipPhotoPage.uploadPhoto(relativePath);
+        Thread.sleep(1000);
+        relationshipPhotoPage.clickSaveButton();
         Thread.sleep(2000);
+        // relationshipPhotoPage.clickCloseButton();
+        // Thread.sleep(2000);
         relationshipPhotoPage.clickNextButton();
         Thread.sleep(2000);
     }

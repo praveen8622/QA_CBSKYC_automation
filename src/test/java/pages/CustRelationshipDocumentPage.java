@@ -71,7 +71,7 @@ public class CustRelationshipDocumentPage extends BasePage {
     }
 
     public void uploadDocument(String filePath) {
-        LoggerUtil.info("Uploading document: " + filePath);
+        LoggerUtil.info("Uploading document from path: " + filePath);
         uploadFile(fileUploadInputLocator, filePath);
     }
 
