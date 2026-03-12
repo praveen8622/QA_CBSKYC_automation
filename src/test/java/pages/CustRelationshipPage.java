@@ -11,10 +11,30 @@ public class CustRelationshipPage extends BasePage {
     // Locators
     // =================================================
     private By isMemberCheckboxBy = By.name("isAssociatedMemberCustomer");
+    private By customerIdContainerBy = By.xpath(
+            "//label[text()='Family Member Customer ID']/following::input[@role='combobox'][1]/ancestor::div[contains(@class, 'container')]");
+    private By customerIdInputBy = By
+            .xpath("//label[text()='Family Member Customer ID']/following::input[@role='combobox'][1]");
 
     private By familyCheckboxBy = By.xpath("//input[@name='kycInfoCategoryCodes' and @value='2']");
     private By nomineeCheckboxBy = By.xpath("//input[@name='kycInfoCategoryCodes' and @value='3']");
     private By dependentCheckboxBy = By.xpath("//input[@name='kycInfoCategoryCodes' and @value='9']");
+
+    // Corporate Categories
+    private By shareholderCheckboxBy = By.xpath("//input[@name='kycInfoCategoryCodes' and @value='5']");
+    private By beneficiaryOwnerCheckboxBy = By.xpath("//input[@name='kycInfoCategoryCodes' and @value='6']");
+    private By managementCheckboxBy = By.xpath("//input[@name='kycInfoCategoryCodes' and @value='7']");
+    private By boardOfDirectorsCheckboxBy = By.xpath("//input[@name='kycInfoCategoryCodes' and @value='8']");
+
+    // Corporate Specific Locators
+    private By shareHolderScopeContainerBy = By
+            .xpath("//input[@aria-label='shareHolderScope']/ancestor::div[contains(@class, 'container')]");
+    private By shareHolderScopeInputBy = By.xpath("//input[@aria-label='shareHolderScope']");
+    private By isShareHolderSelfBeneficiaryOwnerYesBy = By
+            .xpath("//input[@name='isShareHolderSelfBeneficiaryOwner' and @value='true']");
+    private By isShareHolderSelfBeneficiaryOwnerNoBy = By
+            .xpath("//input[@name='isShareHolderSelfBeneficiaryOwner' and @value='false']");
+    private By shareHolderPercentagelocator = By.name("shareHoldingExposurePct");
 
     private By relationContainerBy = By
             .xpath("//input[@aria-label='relationId']/ancestor::div[contains(@class, 'container')]");
@@ -56,9 +76,14 @@ public class CustRelationshipPage extends BasePage {
     // Actions
     // =================================================
 
-    public void setMemberCustomer(boolean isMember) {
+    public void setMemberCustomer(boolean isMember, String customerCode) {
         LoggerUtil.info("Setting 'Is Member Customer?' to " + isMember);
         setCheckbox(isMemberCheckboxBy, isMember);
+
+        if (isMember && customerCode != null && !customerCode.isEmpty()) {
+            LoggerUtil.info("Selecting Member Customer ID/Code: " + customerCode);
+            selectFromReactSelect(customerIdContainerBy, customerIdInputBy, customerCode);
+        }
     }
 
     public void setKycCategory(String category) {
@@ -69,6 +94,29 @@ public class CustRelationshipPage extends BasePage {
             setCheckbox(nomineeCheckboxBy, true);
         else if (category.equalsIgnoreCase("Dependent"))
             setCheckbox(dependentCheckboxBy, true);
+        else if (category.equalsIgnoreCase("Shareholder"))
+            setCheckbox(shareholderCheckboxBy, true);
+        else if (category.equalsIgnoreCase("Beneficiary Owner"))
+            setCheckbox(beneficiaryOwnerCheckboxBy, true);
+        else if (category.equalsIgnoreCase("Management"))
+            setCheckbox(managementCheckboxBy, true);
+        else if (category.equalsIgnoreCase("Board of Directors"))
+            setCheckbox(boardOfDirectorsCheckboxBy, true);
+    }
+
+    public void selectShareHolderScope(String scope) {
+        LoggerUtil.info("Selecting Shareholder Scope: " + scope);
+        selectFromReactSelect(shareHolderScopeContainerBy, shareHolderScopeInputBy, scope);
+    }
+
+    public void setIsShareHolderSelfBeneficiaryOwner(boolean isSelf, String percentage) {
+        LoggerUtil.info("Setting 'Is Shareholder Self Beneficiary Owner' to: " + (isSelf ? "Yes" : "No"));
+        if (isSelf) {
+            click(isShareHolderSelfBeneficiaryOwnerYesBy);
+            typeText(shareHolderPercentagelocator, percentage);
+        } else {
+            click(isShareHolderSelfBeneficiaryOwnerNoBy);
+        }
     }
 
     public void selectRelation(String relation) {

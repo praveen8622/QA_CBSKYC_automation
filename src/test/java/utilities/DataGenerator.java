@@ -47,6 +47,14 @@ public class DataGenerator {
         return generateRandomNumber(3) + "-" + generateRandomNumber(3) + "-" + generateRandomNumber(5);
     }
 
+    public static String generateRandomCompanyName() {
+        return faker.company().name() + " Corp";
+    }
+
+    public static String generateRandomPhoneNumber() {
+        return "98" + generateRandomNumber(8);
+    }
+
     public static String generateRandomfirstName() {
         String firstName = faker.name().firstName();
         // Remove any non-alphabetic characters

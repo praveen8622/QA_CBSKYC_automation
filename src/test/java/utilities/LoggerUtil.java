@@ -18,6 +18,10 @@ public class LoggerUtil {
 		logger.info(GREEN + message + RESET);
 	}
 
+	public static void title(String message) {
+		logger.info(PURPLE + message + RESET);
+	}
+
 	public static void warn(String message) {
 		logger.warn(YELLOW + message + RESET);
 	}

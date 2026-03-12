@@ -23,6 +23,12 @@ public class HomePage extends BasePage {
     // =================================================
     // Navigation Methods
     // =================================================
+
+    public void navigateToCustomerManagement() {
+        LoggerUtil.info("Clicking 'Customer Management' menu");
+        click(navCustregLocator);
+    }
+
     public void navigateToCustomerRegistration() {
         LoggerUtil.info("Clicking 'Customer Registration' submenu");
         click(custRegLocator);
@@ -31,8 +37,7 @@ public class HomePage extends BasePage {
     }
 
     public void navigateToCustomerScreening() {
-        LoggerUtil.info("Clicking 'Customer Management' menu");
-        click(navCustregLocator);
+        navigateToCustomerManagement();
 
         LoggerUtil.info("Clicking 'Customer Screening' submenu");
         click(custScreeningLocator);

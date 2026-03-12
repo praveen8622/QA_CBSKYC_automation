@@ -4,40 +4,36 @@ import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 import pages.*;
 
-public class KycWorkflow {
-    private WebDriver driver;
-    private SoftAssert softAssert;
+public class BaseCustRegWorkflow {
+    protected WebDriver driver;
+    protected SoftAssert softAssert;
 
-    // Pages
-    private CustRegisterPage reg;
-    private CustIdentityPage identityPage;
-    private CustCommunicationPage communicationPage;
-    private CustDocument documentPage;
-    private CustAddressPage addressPage;
-    private CustHighProfilePage highProfilePage;
-    private CustTransactionPage transactionPage;
-    private CustCashFlowPage cashFlowPage;
-    private CustExposurePage exposurePage;
-    private CustEmploymentPage employmentPage;
-    private CustRelationshipPage relationshipPage;
-    private CustRelationshipIdentityPage relationshipIdentityPage;
-    private CustRelationshipCommunication relationshipCommunicationPage;
-    private CustRelationshipDocumentPage relationshipDocumentPage;
-    private CustRelationshipAddressPage relationshipAddressPage;
-    private CustRegHomepage custRegHomePage;
-    private HomePage homePage;
-    private CustScreeningPage custScreeningPage;
-    private CustRelationshipPhoto relationshipPhotoPage;
+    // Common Pages
+    protected CustRegHomepage custRegHomePage;
+    protected CustIdentityPage identityPage;
+    protected CustCommunicationPage communicationPage;
+    protected CustDocument documentPage;
+    protected CustAddressPage addressPage;
+    protected CustHighProfilePage highProfilePage;
+    protected CustTransactionPage transactionPage;
+    protected CustCashFlowPage cashFlowPage;
+    protected CustExposurePage exposurePage;
+    protected CustEmploymentPage employmentPage;
+    protected CustRelationshipPage relationshipPage;
+    protected CustRelationshipIdentityPage relationshipIdentityPage;
+    protected CustRelationshipCommunication relationshipCommunicationPage;
+    protected CustRelationshipDocumentPage relationshipDocumentPage;
+    protected CustRelationshipAddressPage relationshipAddressPage;
+    protected CustRelationshipPhoto relationshipPhotoPage;
 
-    public KycWorkflow(WebDriver driver, SoftAssert softAssert) {
+    public BaseCustRegWorkflow(WebDriver driver, SoftAssert softAssert) {
         this.driver = driver;
         this.softAssert = softAssert;
-        initializePages();
+        initializeBasePages();
     }
 
-    private void initializePages() {
-        reg = new CustRegisterPage(driver);
-        homePage = new HomePage(driver);
+    private void initializeBasePages() {
+        custRegHomePage = new CustRegHomepage(driver);
         identityPage = new CustIdentityPage(driver);
         communicationPage = new CustCommunicationPage(driver);
         documentPage = new CustDocument(driver);
@@ -52,16 +48,12 @@ public class KycWorkflow {
         relationshipCommunicationPage = new CustRelationshipCommunication(driver);
         relationshipDocumentPage = new CustRelationshipDocumentPage(driver);
         relationshipAddressPage = new CustRelationshipAddressPage(driver);
-        custRegHomePage = new CustRegHomepage(driver);
-        custScreeningPage = new CustScreeningPage(driver);
         relationshipPhotoPage = new CustRelationshipPhoto(driver);
-
-        syncSoftAssert();
+        syncBaseSoftAssert();
     }
 
-    private void syncSoftAssert() {
-        reg.setSoftAssert(softAssert);
-        homePage.setSoftAssert(softAssert);
+    private void syncBaseSoftAssert() {
+        custRegHomePage.setSoftAssert(softAssert);
         identityPage.setSoftAssert(softAssert);
         communicationPage.setSoftAssert(softAssert);
         documentPage.setSoftAssert(softAssert);
@@ -76,60 +68,17 @@ public class KycWorkflow {
         relationshipCommunicationPage.setSoftAssert(softAssert);
         relationshipDocumentPage.setSoftAssert(softAssert);
         relationshipAddressPage.setSoftAssert(softAssert);
-        custRegHomePage.setSoftAssert(softAssert);
-        custScreeningPage.setSoftAssert(softAssert);
         relationshipPhotoPage.setSoftAssert(softAssert);
     }
 
     public void updateSoftAssert(SoftAssert newSoftAssert) {
         this.softAssert = newSoftAssert;
-        syncSoftAssert();
+        syncBaseSoftAssert();
     }
 
     // ================================
-    // Business Flows
+    // Shared Business Flows
     // ================================
-
-    public String getScreeningId(String fullName) throws InterruptedException {
-        homePage.navigateToCustomerScreening();
-        custScreeningPage.enterFullName(fullName);
-        custScreeningPage.clickSearch();
-        Thread.sleep(2000);
-        return custScreeningPage.getScreeningId();
-    }
-
-    public void fillPrimaryRegistration(String screeningId, String lastName) throws InterruptedException {
-        homePage.navigateToCustomerRegistration();
-        custRegHomePage.clickAddCustomerRegistration();
-
-        reg.chooseLegalStatus("Individual");
-        reg.enterScreeningId(screeningId);
-        Thread.sleep(1000);
-        reg.isEmployee("No");
-        Thread.sleep(1000);
-        reg.enterMaidenName(lastName);
-        Thread.sleep(1000);
-        reg.selectBirthDate("1995", "March", "29");
-        Thread.sleep(1000);
-        reg.enterBirthCountry("Nepal");
-        reg.enterBirthAddressIfApplicable("Nepal");
-        reg.selectIsForeign(false, "India");
-        reg.selectIsPEP(false, "Domestic pep");
-        reg.selectGender("male");
-        reg.selectOnboardingChannel("Physical");
-        reg.selectMaritalStatus("Single");
-        reg.selectReligion("Hindu");
-        reg.selectEducation("Master’s Degree");
-        reg.selectMotherLanguage("Nepali");
-        reg.selectPreferredCommunicationLanguage("Nepali");
-        Thread.sleep(1000);
-        reg.clickNextButton();
-        Thread.sleep(1000);
-    }
-
-    public void resumeDraft(String fullName) {
-        custRegHomePage.searchAndEditDraftCustomer(fullName);
-    }
 
     public void fillIdentityDetails(String licenseNumber, String relativePath) throws InterruptedException {
         custRegHomePage.navigateToIdentityTab();
@@ -140,7 +89,7 @@ public class KycWorkflow {
         Thread.sleep(1000);
         identityPage.selectIssueDate("2020", "March", "29");
         Thread.sleep(1000);
-        identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
+        // identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
         Thread.sleep(1000);
         identityPage.uploadIdentityDocument(relativePath);
         Thread.sleep(1000);
@@ -198,11 +147,11 @@ public class KycWorkflow {
         Thread.sleep(1000);
         addressPage.enterWardNo("123");
         Thread.sleep(1000);
-        addressPage.enterHouseNo("123");
+        addressPage.enterHouseNo("342");
         Thread.sleep(1000);
-        addressPage.enterLatitude("123");
+        addressPage.enterLatitude("27.7172");
         Thread.sleep(1000);
-        addressPage.enterLongitude("123");
+        addressPage.enterLongitude("85.3240");
         Thread.sleep(1000);
         addressPage.uploadAddressDocument(relativePath);
         Thread.sleep(1000);
@@ -287,47 +236,101 @@ public class KycWorkflow {
         Thread.sleep(1000);
     }
 
-    public void fillRelationshipMasterDetails() throws InterruptedException {
+    public void fillIndividualRelationshipMaster(boolean isMember, String customerCode, String firstName,
+            String lastName) throws InterruptedException {
         custRegHomePage.navigateToRelationshipMasterTab();
         Thread.sleep(1000);
         custRegHomePage.clickAddRelationshipBtn();
         Thread.sleep(1000);
+
+        relationshipPage.setMemberCustomer(isMember, customerCode);
+        Thread.sleep(1000);
+
         relationshipPage.setKycCategory("Family");
         Thread.sleep(1000);
+
         relationshipPage.selectRelation("Father");
         Thread.sleep(1000);
-        relationshipPage.enterFirstName("Hari", "हरि");
-        Thread.sleep(1000);
-        relationshipPage.enterLastName("Karki", "कारकि");
-        Thread.sleep(1000);
-        relationshipPage.selectBirthDate("2000", "January", "1");
-        Thread.sleep(1000);
-        relationshipPage.selectBirthCountry("Nepal");
-        Thread.sleep(1000);
-        relationshipPage.selectGender("Male");
-        Thread.sleep(1000);
-        relationshipPage.selectMaritalStatus("Single");
-        Thread.sleep(1000);
-        relationshipPage.selectOccupation("Engineer");
-        Thread.sleep(1000);
-        relationshipPage.selectEducation("Master’s Degree'");
+
+        if (!isMember) {
+            relationshipPage.enterFirstName(firstName, "");
+            Thread.sleep(1000);
+            relationshipPage.enterLastName(lastName, "");
+            Thread.sleep(1000);
+            relationshipPage.selectBirthDate("1985", "May", "15");
+            Thread.sleep(1000);
+            relationshipPage.selectBirthCountry("Nepal");
+            Thread.sleep(1000);
+            relationshipPage.selectMaritalStatus("Married");
+            Thread.sleep(1000);
+            relationshipPage.selectOccupation("Education");
+            Thread.sleep(1000);
+            relationshipPage.selectEducation("Master’s Degree");
+            Thread.sleep(2000);
+        }
+
+        relationshipPage.clickNext();
         Thread.sleep(2000);
+    }
+
+    public void fillCorporateRelationshipMaster(boolean isMemberCustomer, String customerCode, String kycCategory,
+            String firstName,
+            String lastName)
+            throws InterruptedException {
+        custRegHomePage.navigateToRelationshipMasterTab();
+        Thread.sleep(1000);
+        custRegHomePage.clickAddRelationshipBtn();
+        Thread.sleep(1000);
+
+        relationshipPage.setMemberCustomer(isMemberCustomer, customerCode);
+        Thread.sleep(1000);
+
+        relationshipPage.setKycCategory(kycCategory);
+        Thread.sleep(1000);
+
+        if (kycCategory.equalsIgnoreCase("Shareholder")) {
+            relationshipPage.selectShareHolderScope("Individual");
+            Thread.sleep(1000);
+
+            relationshipPage.setIsShareHolderSelfBeneficiaryOwner(true, "10");
+            Thread.sleep(1000);
+        }
+        if (!isMemberCustomer) {
+            relationshipPage.enterFirstName(firstName, "");
+            Thread.sleep(1000);
+            relationshipPage.enterLastName(lastName, "");
+            Thread.sleep(1000);
+            relationshipPage.selectBirthDate("1985", "May", "15");
+            Thread.sleep(1000);
+            relationshipPage.selectBirthCountry("Nepal");
+            Thread.sleep(1000);
+            relationshipPage.selectGender("Male");
+            Thread.sleep(1000);
+            relationshipPage.selectMaritalStatus("Married");
+            Thread.sleep(1000);
+            relationshipPage.selectOccupation("Service");
+            Thread.sleep(1000);
+            relationshipPage.selectEducation("Master’s Degree");
+            Thread.sleep(2000);
+        }
+
         relationshipPage.clickNext();
         Thread.sleep(2000);
     }
 
     public void fillRelationshipIdentityDetails(String licenseNumber, String relativePath) throws InterruptedException {
         relationshipIdentityPage.clickIdentityTab();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         relationshipIdentityPage.clickAddIdentity();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         relationshipIdentityPage.selectIdentityTypeAndFillConditionalField("Driver’s License", "Bagmati Province");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         relationshipIdentityPage.enterIdentityNumber(licenseNumber);
         Thread.sleep(1000);
         relationshipIdentityPage.selectIssueDate("2021", "January", "1");
         Thread.sleep(1000);
-        relationshipIdentityPage.handleExpiryDateIfApplicable("2031", "January", "1");
+        // relationshipIdentityPage.handleExpiryDateIfApplicable("2031", "January",
+        // "1");
         Thread.sleep(1000);
         relationshipIdentityPage.uploadDocument(relativePath);
         Thread.sleep(1000);
@@ -414,6 +417,31 @@ public class KycWorkflow {
         // relationshipPhotoPage.clickCloseButton();
         // Thread.sleep(2000);
         relationshipPhotoPage.clickNextButton();
+        Thread.sleep(2000);
+    }
+
+    public void skipRelationshipIdentityDetails() throws InterruptedException {
+        relationshipIdentityPage.clickNext();
+        Thread.sleep(2000);
+    }
+
+    public void skipRelationshipCommunicationDetails() throws InterruptedException {
+        relationshipCommunicationPage.clickNext();
+        Thread.sleep(2000);
+    }
+
+    public void skipRelationshipDocumentDetails() throws InterruptedException {
+        relationshipDocumentPage.clickNext();
+        Thread.sleep(2000);
+    }
+
+    public void skipRelationshipAddressDetails() throws InterruptedException {
+        relationshipAddressPage.clickNext();
+        Thread.sleep(2000);
+    }
+
+    public void skipRelationshipPhoto() throws InterruptedException {
+        relationshipPhotoPage.clickSaveButton();
         Thread.sleep(2000);
     }
 }

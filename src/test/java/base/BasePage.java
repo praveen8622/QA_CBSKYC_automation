@@ -73,6 +73,7 @@ public class BasePage {
 
 			WebElement input = wait.waitForElementToBeVisible(inputLocator);
 			input.sendKeys(value);
+			Thread.sleep(2000);
 			input.sendKeys(Keys.ENTER);
 		} catch (Exception e) {
 			handleActionException("selectFromReactSelect", containerLocator, e);

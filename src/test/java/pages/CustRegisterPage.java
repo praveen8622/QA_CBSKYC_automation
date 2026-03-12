@@ -160,6 +160,7 @@ public class CustRegisterPage extends BasePage {
 	public void selectGender(String genderValue) {
 		LoggerUtil.info("Selecting '" + genderValue + "' from Gender dropdown");
 		selectFromGenderDropdown(genderLocator, genderValue);
+
 	}
 
 	public void selectOnboardingChannel(String onboardingChannelValue) {
