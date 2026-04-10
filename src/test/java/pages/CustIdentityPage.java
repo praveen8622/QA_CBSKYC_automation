@@ -21,6 +21,7 @@ public class CustIdentityPage extends BasePage {
 	private By openIssueOfficeNameInputLocator = By.xpath("//input[@name='openIssueOfficeName']");
 	private By localBodyInputLocator = By.xpath("//input[@aria-label='local Body']");
 	private By stateInputLocator = By.xpath("//input[@aria-label='State']");
+	private By districtInputLocator = By.xpath("//input[@aria-label='District']");
 
 	private By issueDateButtonLocator = By.name("issueDate");
 	private By issueDateLocalInputLocator = By.xpath("//input[@name='issueDateLocal']");
@@ -77,7 +78,8 @@ public class CustIdentityPage extends BasePage {
 		fillConditionalIdentityField(type, fieldValue,
 				openIssueOfficeNameInputLocator,
 				localBodyInputLocator,
-				stateInputLocator);
+				stateInputLocator,
+				districtInputLocator);
 	}
 
 	public void enterIdentityNumber(String identityNumberValue) {

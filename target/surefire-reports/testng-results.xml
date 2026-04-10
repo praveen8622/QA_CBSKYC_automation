@@ -1,569 +1,407 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="32" passed="31" failed="1" skipped="0">
+<testng-results ignored="0" total="31" passed="31" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-12T11:21:38 NPT" name="Suite" finished-at="2026-03-12T11:29:45 NPT" duration-ms="487067">
+  <suite started-at="2026-03-26T10:26:22 NPT" name="Suite" finished-at="2026-03-26T10:33:55 NPT" duration-ms="452467">
     <groups>
     </groups>
-    <test started-at="2026-03-12T11:21:38 NPT" name="Chrome Test" finished-at="2026-03-12T11:29:45 NPT" duration-ms="487067">
+    <test started-at="2026-03-26T10:26:22 NPT" name="Chrome Test" finished-at="2026-03-26T10:33:55 NPT" duration-ms="452467">
       <class name="tests.CusRegTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:21:38 NPT" name="setUp" finished-at="2026-03-12T11:21:55 NPT" duration-ms="16483" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:26:22 NPT" name="setUp" finished-at="2026-03-26T10:26:42 NPT" duration-ms="19614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:21:55 NPT" name="pageSetup" finished-at="2026-03-12T11:21:55 NPT" duration-ms="34" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:26:42 NPT" name="pageSetup" finished-at="2026-03-26T10:26:42 NPT" duration-ms="62" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:21:55 NPT" name="initSoftAssert" finished-at="2026-03-12T11:21:55 NPT" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:26:42 NPT" name="initSoftAssert" finished-at="2026-03-26T10:26:42 NPT" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:21:55 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:21:55 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:26:42 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:26:42 NPT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyCustomerRegistration()[pri:1, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:21:55 NPT" name="verifyCustomerRegistration" description="Verify Customer Registration" finished-at="2026-03-12T11:22:10 NPT" duration-ms="15090" status="PASS">
+        <test-method signature="verifyCustomerRegistration()[pri:1, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:26:42 NPT" name="verifyCustomerRegistration" description="Verify Customer Registration" finished-at="2026-03-26T10:27:00 NPT" duration-ms="17506" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCustomerRegistration -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:10 NPT" name="initSoftAssert" finished-at="2026-03-12T11:22:10 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:00 NPT" name="initSoftAssert" finished-at="2026-03-26T10:27:00 NPT" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:10 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:22:10 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:00 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:27:00 NPT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyIdentityDetails()[pri:2, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:10 NPT" name="verifyIdentityDetails" description="Verify Identity Details" finished-at="2026-03-12T11:22:21 NPT" duration-ms="10905" status="PASS">
+        <test-method signature="verifyIdentityDetails()[pri:2, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:00 NPT" name="verifyIdentityDetails" description="Verify Identity Details" finished-at="2026-03-26T10:27:11 NPT" duration-ms="11300" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyIdentityDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:21 NPT" name="initSoftAssert" finished-at="2026-03-12T11:22:21 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:11 NPT" name="initSoftAssert" finished-at="2026-03-26T10:27:11 NPT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:21 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:22:21 NPT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:11 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:27:11 NPT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyCommunicationDetails()[pri:3, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:21 NPT" name="verifyCommunicationDetails" description="Verify Communication Details" finished-at="2026-03-12T11:22:32 NPT" duration-ms="10698" status="PASS">
+        <test-method signature="verifyCommunicationDetails()[pri:3, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:11 NPT" name="verifyCommunicationDetails" description="Verify Communication Details" finished-at="2026-03-26T10:27:23 NPT" duration-ms="11219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCommunicationDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:32 NPT" name="initSoftAssert" finished-at="2026-03-12T11:22:32 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:23 NPT" name="initSoftAssert" finished-at="2026-03-26T10:27:23 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyDocumentDetails()[pri:4, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:32 NPT" name="verifyDocumentDetails" description="Verify Document Details" finished-at="2026-03-12T11:22:35 NPT" duration-ms="3222" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:23 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:27:23 NPT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyDocumentDetails()[pri:4, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:23 NPT" name="verifyDocumentDetails" description="Verify Document Details" finished-at="2026-03-26T10:27:26 NPT" duration-ms="3925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDocumentDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:32 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:22:32 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:35 NPT" name="initSoftAssert" finished-at="2026-03-12T11:22:35 NPT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:26 NPT" name="initSoftAssert" finished-at="2026-03-26T10:27:26 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:35 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:22:35 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:26 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:27:26 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyAddressDetails()[pri:5, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:22:35 NPT" name="verifyAddressDetails" description="Verify Address Details" finished-at="2026-03-12T11:23:01 NPT" duration-ms="25728" status="PASS">
+        <test-method signature="verifyAddressDetails()[pri:5, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:26 NPT" name="verifyAddressDetails" description="Verify Address Details" finished-at="2026-03-26T10:27:53 NPT" duration-ms="26602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddressDetails -->
-        <test-method signature="verifyHighProfileDetails()[pri:6, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:01 NPT" name="verifyHighProfileDetails" description="Verify High Profile Details" finished-at="2026-03-12T11:23:38 NPT" duration-ms="37326" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:53 NPT" name="initSoftAssert" finished-at="2026-03-26T10:27:53 NPT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSoftAssert -->
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:53 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:27:53 NPT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyHighProfileDetails()[pri:6, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:27:53 NPT" name="verifyHighProfileDetails" description="Verify High Profile Details" finished-at="2026-03-26T10:28:32 NPT" duration-ms="38495" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHighProfileDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:01 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:23:01 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:01 NPT" name="initSoftAssert" finished-at="2026-03-12T11:23:01 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:32 NPT" name="initSoftAssert" finished-at="2026-03-26T10:28:32 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:38 NPT" name="initSoftAssert" finished-at="2026-03-12T11:23:38 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:38 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:23:38 NPT" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:32 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:28:32 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyTransactionDetails()[pri:7, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:38 NPT" name="verifyTransactionDetails" description="Verify Transaction Details" finished-at="2026-03-12T11:23:41 NPT" duration-ms="3062" status="PASS">
+        <test-method signature="verifyTransactionDetails()[pri:7, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:32 NPT" name="verifyTransactionDetails" description="Verify Transaction Details" finished-at="2026-03-26T10:28:35 NPT" duration-ms="3249" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTransactionDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:41 NPT" name="initSoftAssert" finished-at="2026-03-12T11:23:41 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:35 NPT" name="initSoftAssert" finished-at="2026-03-26T10:28:35 NPT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:41 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:23:41 NPT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:35 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:28:35 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyCashFlowDetails()[pri:8, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:41 NPT" name="verifyCashFlowDetails" description="Verify Cash Flow Details" finished-at="2026-03-12T11:23:51 NPT" duration-ms="9311" status="PASS">
+        <test-method signature="verifyCashFlowDetails()[pri:8, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:35 NPT" name="verifyCashFlowDetails" description="Verify Cash Flow Details" finished-at="2026-03-26T10:28:45 NPT" duration-ms="9726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCashFlowDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:51 NPT" name="initSoftAssert" finished-at="2026-03-12T11:23:51 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:45 NPT" name="initSoftAssert" finished-at="2026-03-26T10:28:45 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:51 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:23:51 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:45 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:28:45 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyExposureDetails()[pri:9, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:23:51 NPT" name="verifyExposureDetails" description="Verify Exposure Details" finished-at="2026-03-12T11:24:00 NPT" duration-ms="9868" status="PASS">
+        <test-method signature="verifyExposureDetails()[pri:9, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:45 NPT" name="verifyExposureDetails" description="Verify Exposure Details" finished-at="2026-03-26T10:28:55 NPT" duration-ms="10134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyExposureDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:00 NPT" name="initSoftAssert" finished-at="2026-03-12T11:24:00 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:55 NPT" name="initSoftAssert" finished-at="2026-03-26T10:28:55 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyEmploymentDetails()[pri:10, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:00 NPT" name="verifyEmploymentDetails" description="Verify Employment Details" finished-at="2026-03-12T11:24:13 NPT" duration-ms="12093" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:55 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:28:55 NPT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyEmploymentDetails()[pri:10, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:28:55 NPT" name="verifyEmploymentDetails" description="Verify Employment Details" finished-at="2026-03-26T10:29:07 NPT" duration-ms="12459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEmploymentDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:00 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:24:00 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:13 NPT" name="initSoftAssert" finished-at="2026-03-12T11:24:13 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:07 NPT" name="initSoftAssert" finished-at="2026-03-26T10:29:07 NPT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:13 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:24:13 NPT" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:07 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:29:07 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipDetails()[pri:11, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:13 NPT" name="verifyRelationshipDetails" description="Verify Relationship Master" finished-at="2026-03-12T11:24:25 NPT" duration-ms="12658" status="PASS">
+        <test-method signature="verifyRelationshipDetails()[pri:11, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:07 NPT" name="verifyRelationshipDetails" description="Verify Relationship Master" finished-at="2026-03-26T10:29:21 NPT" duration-ms="13561" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:25 NPT" name="initSoftAssert" finished-at="2026-03-12T11:24:25 NPT" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:21 NPT" name="initSoftAssert" finished-at="2026-03-26T10:29:21 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipIdentity()[pri:12, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:25 NPT" name="verifyRelationshipIdentity" description="Verify Relationship Identity" finished-at="2026-03-12T11:24:28 NPT" duration-ms="2278" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:21 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:29:21 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyRelationshipIdentity()[pri:12, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:21 NPT" name="verifyRelationshipIdentity" description="Verify Relationship Identity" finished-at="2026-03-26T10:29:23 NPT" duration-ms="2608" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipIdentity -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:25 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:24:25 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:28 NPT" name="initSoftAssert" finished-at="2026-03-12T11:24:28 NPT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:23 NPT" name="initSoftAssert" finished-at="2026-03-26T10:29:23 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipCommunication()[pri:13, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:28 NPT" name="verifyRelationshipCommunication" description="Verify Relationship Communication" finished-at="2026-03-12T11:24:30 NPT" duration-ms="2239" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:23 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:29:23 NPT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyRelationshipCommunication()[pri:13, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:23 NPT" name="verifyRelationshipCommunication" description="Verify Relationship Communication" finished-at="2026-03-26T10:29:26 NPT" duration-ms="2280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipCommunication -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:28 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:24:28 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:30 NPT" name="initSoftAssert" finished-at="2026-03-12T11:24:30 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:26 NPT" name="initSoftAssert" finished-at="2026-03-26T10:29:26 NPT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:30 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:24:30 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:26 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:29:26 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipDocument()[pri:14, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:30 NPT" name="verifyRelationshipDocument" description="Verify Relationship Document" finished-at="2026-03-12T11:24:32 NPT" duration-ms="2157" status="PASS">
+        <test-method signature="verifyRelationshipDocument()[pri:14, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:26 NPT" name="verifyRelationshipDocument" description="Verify Relationship Document" finished-at="2026-03-26T10:29:28 NPT" duration-ms="2257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipDocument -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:32 NPT" name="initSoftAssert" finished-at="2026-03-12T11:24:32 NPT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:28 NPT" name="initSoftAssert" finished-at="2026-03-26T10:29:28 NPT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:32 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:24:32 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:28 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:29:28 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipAddress()[pri:15, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:32 NPT" name="verifyRelationshipAddress" description="Verify Relationship Address" finished-at="2026-03-12T11:24:34 NPT" duration-ms="2194" status="PASS">
+        <test-method signature="verifyRelationshipAddress()[pri:15, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:28 NPT" name="verifyRelationshipAddress" description="Verify Relationship Address" finished-at="2026-03-26T10:29:30 NPT" duration-ms="2178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipAddress -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:34 NPT" name="initSoftAssert" finished-at="2026-03-12T11:24:34 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:30 NPT" name="initSoftAssert" finished-at="2026-03-26T10:29:30 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:34 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:24:34 NPT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:30 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:29:30 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipPhoto()[pri:16, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:34 NPT" name="verifyRelationshipPhoto" description="Verify Relationship Photo" finished-at="2026-03-12T11:24:36 NPT" duration-ms="2141" status="PASS">
+        <test-method signature="verifyRelationshipPhoto()[pri:16, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:30 NPT" name="verifyRelationshipPhoto" description="Verify Relationship Photo" finished-at="2026-03-26T10:29:32 NPT" duration-ms="2138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipPhoto -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@69c532af]" started-at="2026-03-12T11:24:36 NPT" name="tearDown" finished-at="2026-03-12T11:24:37 NPT" duration-ms="860" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@49edcb30]" started-at="2026-03-26T10:29:32 NPT" name="tearDown" finished-at="2026-03-26T10:29:35 NPT" duration-ms="2352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.CusRegTest -->
       <class name="tests.CorporateCustRegTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:24:37 NPT" name="setUp" finished-at="2026-03-12T11:24:52 NPT" duration-ms="14933" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:29:35 NPT" name="setUp" finished-at="2026-03-26T10:29:51 NPT" duration-ms="16117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:24:52 NPT" name="pageSetup" finished-at="2026-03-12T11:24:52 NPT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:29:51 NPT" name="pageSetup" finished-at="2026-03-26T10:29:51 NPT" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:24:52 NPT" name="initSoftAssert" finished-at="2026-03-12T11:24:52 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:29:51 NPT" name="initSoftAssert" finished-at="2026-03-26T10:29:51 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:24:52 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:24:52 NPT" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:29:51 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:29:51 NPT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyCorporateCustomerRegistration()[pri:1, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:24:52 NPT" name="verifyCorporateCustomerRegistration" description="Verify Corporate Customer Registration" finished-at="2026-03-12T11:25:08 NPT" duration-ms="15566" status="PASS">
+        <test-method signature="verifyCorporateCustomerRegistration()[pri:1, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:29:51 NPT" name="verifyCorporateCustomerRegistration" description="Verify Corporate Customer Registration" finished-at="2026-03-26T10:30:07 NPT" duration-ms="15817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCorporateCustomerRegistration -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:08 NPT" name="initSoftAssert" finished-at="2026-03-12T11:25:08 NPT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:07 NPT" name="initSoftAssert" finished-at="2026-03-26T10:30:07 NPT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:08 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:25:08 NPT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:07 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:30:07 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyIdentityDetails()[pri:2, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:08 NPT" name="verifyIdentityDetails" description="Verify Identity Details" finished-at="2026-03-12T11:25:18 NPT" duration-ms="10527" status="PASS">
+        <test-method signature="verifyIdentityDetails()[pri:2, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:07 NPT" name="verifyIdentityDetails" description="Verify Identity Details" finished-at="2026-03-26T10:30:18 NPT" duration-ms="11353" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyIdentityDetails -->
-        <test-method signature="verifyCommunicationDetails()[pri:3, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:18 NPT" name="verifyCommunicationDetails" description="Verify Communication Details" finished-at="2026-03-12T11:25:29 NPT" duration-ms="10636" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:18 NPT" name="initSoftAssert" finished-at="2026-03-26T10:30:18 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSoftAssert -->
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:18 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:30:18 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyCommunicationDetails()[pri:3, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:18 NPT" name="verifyCommunicationDetails" description="Verify Communication Details" finished-at="2026-03-26T10:30:29 NPT" duration-ms="11087" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCommunicationDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:18 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:25:18 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:29 NPT" name="initSoftAssert" finished-at="2026-03-26T10:30:29 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSoftAssert -->
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:29 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:30:29 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:18 NPT" name="initSoftAssert" finished-at="2026-03-12T11:25:18 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:29 NPT" name="initSoftAssert" finished-at="2026-03-12T11:25:29 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyDocumentDetails()[pri:4, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:29 NPT" name="verifyDocumentDetails" description="Verify Document Details" finished-at="2026-03-12T11:25:32 NPT" duration-ms="3335" status="PASS">
+        <test-method signature="verifyDocumentDetails()[pri:4, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:29 NPT" name="verifyDocumentDetails" description="Verify Document Details" finished-at="2026-03-26T10:30:33 NPT" duration-ms="4008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDocumentDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:29 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:25:29 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:32 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:25:32 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:32 NPT" name="initSoftAssert" finished-at="2026-03-12T11:25:32 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:33 NPT" name="initSoftAssert" finished-at="2026-03-26T10:30:33 NPT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyAddressDetails()[pri:5, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:32 NPT" name="verifyAddressDetails" description="Verify Address Details" finished-at="2026-03-12T11:25:58 NPT" duration-ms="25403" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:33 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:30:33 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyAddressDetails()[pri:5, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:30:33 NPT" name="verifyAddressDetails" description="Verify Address Details" finished-at="2026-03-26T10:31:00 NPT" duration-ms="26885" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddressDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:58 NPT" name="initSoftAssert" finished-at="2026-03-12T11:25:58 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:58 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:25:58 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyHighProfileDetails()[pri:6, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:25:58 NPT" name="verifyHighProfileDetails" description="Verify High Profile Details" finished-at="2026-03-12T11:26:35 NPT" duration-ms="37482" status="PASS">
+        <test-method signature="verifyHighProfileDetails()[pri:6, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:00 NPT" name="verifyHighProfileDetails" description="Verify High Profile Details" finished-at="2026-03-26T10:31:39 NPT" duration-ms="39312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHighProfileDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:35 NPT" name="initSoftAssert" finished-at="2026-03-12T11:26:35 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:00 NPT" name="initSoftAssert" finished-at="2026-03-26T10:31:00 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:35 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:26:35 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:00 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:31:00 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyTransactionDetails()[pri:7, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:35 NPT" name="verifyTransactionDetails" description="Verify Transaction Details" finished-at="2026-03-12T11:26:38 NPT" duration-ms="3094" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:39 NPT" name="initSoftAssert" finished-at="2026-03-26T10:31:39 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSoftAssert -->
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:39 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:31:39 NPT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyTransactionDetails()[pri:7, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:39 NPT" name="verifyTransactionDetails" description="Verify Transaction Details" finished-at="2026-03-26T10:31:43 NPT" duration-ms="3463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTransactionDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:38 NPT" name="initSoftAssert" finished-at="2026-03-12T11:26:38 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:43 NPT" name="initSoftAssert" finished-at="2026-03-26T10:31:43 NPT" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:38 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:26:38 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:43 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:31:43 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyCashFlowDetails()[pri:8, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:38 NPT" name="verifyCashFlowDetails" description="Verify Cash Flow Details" finished-at="2026-03-12T11:26:47 NPT" duration-ms="9166" status="PASS">
+        <test-method signature="verifyCashFlowDetails()[pri:8, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:43 NPT" name="verifyCashFlowDetails" description="Verify Cash Flow Details" finished-at="2026-03-26T10:31:52 NPT" duration-ms="9502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCashFlowDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:47 NPT" name="initSoftAssert" finished-at="2026-03-12T11:26:47 NPT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:52 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:31:52 NPT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:52 NPT" name="initSoftAssert" finished-at="2026-03-26T10:31:52 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyExposureDetails()[pri:9, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:47 NPT" name="verifyExposureDetails" description="Verify Exposure Details" finished-at="2026-03-12T11:26:57 NPT" duration-ms="9737" status="PASS">
+        <test-method signature="verifyExposureDetails()[pri:9, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:31:52 NPT" name="verifyExposureDetails" description="Verify Exposure Details" finished-at="2026-03-26T10:32:03 NPT" duration-ms="10300" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyExposureDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:47 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:26:47 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyEmploymentDetails()[pri:10, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:57 NPT" name="verifyEmploymentDetails" description="Verify Employment Details" finished-at="2026-03-12T11:27:58 NPT" duration-ms="61240" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Action 'click' failed for element: By.xpath: //p[normalize-space()='Employment Details'] | Error: Expected condition failed: waiting for element to be clickable: By.xpath: //p[normalize-space()='Employment Details'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'assertElementVisible' failed for element: By.xpath: //h4[normalize-space()='Employment Details'] | Error: Expected condition failed: waiting for visibility of element located by By.xpath: //h4[normalize-space()='Employment Details'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'selectFromReactSelect' failed for element: By.xpath: //input[@aria-label='employmentTypeCode']/ancestor::div[contains(@class, 'container')] | Error: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@aria-label='employmentTypeCode']/ancestor::div[contains(@class, 'container')] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'selectFromReactSelect' failed for element: By.xpath: //input[@aria-label='primaryOccupationId']/ancestor::div[contains(@class, 'container')] | Error: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@aria-label='primaryOccupationId']/ancestor::div[contains(@class, 'container')] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'selectFromReactSelect' failed for element: By.xpath: //input[@aria-label='primaryOccupationDesignationId']/ancestor::div[contains(@class, 'container')] | Error: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@aria-label='primaryOccupationDesignationId']/ancestor::div[contains(@class, 'container')] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'typeText' failed for element: By.xpath: //input[@name='organizationName'] | Error: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='organizationName'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'getAttributeValue' failed for element: By.xpath: //input[@name='organizationName'] | Error: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@name='organizationName'] (tried for 5 second(s) with 500 milliseconds interval),
-Organization Name mismatch expected [Tech Corp] but found [],
-Action 'typeText' failed for element: By.xpath: //input[@name='address'] | Error: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='address'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'getAttributeValue' failed for element: By.xpath: //input[@name='address'] | Error: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@name='address'] (tried for 5 second(s) with 500 milliseconds interval),
-Employment Address mismatch expected [Kathmandu] but found [],
-Action 'typeText' failed for element: By.xpath: //input[@name='expectedAnnualIncome'] | Error: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='expectedAnnualIncome'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'getAttributeValue' failed for element: By.xpath: //input[@name='expectedAnnualIncome'] | Error: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@name='expectedAnnualIncome'] (tried for 5 second(s) with 500 milliseconds interval),
-Annual Income mismatch expected [1200000] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Action 'click' failed for element: By.xpath: //p[normalize-space()='Employment Details'] | Error: Expected condition failed: waiting for element to be clickable: By.xpath: //p[normalize-space()='Employment Details'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'assertElementVisible' failed for element: By.xpath: //h4[normalize-space()='Employment Details'] | Error: Expected condition failed: waiting for visibility of element located by By.xpath: //h4[normalize-space()='Employment Details'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'selectFromReactSelect' failed for element: By.xpath: //input[@aria-label='employmentTypeCode']/ancestor::div[contains(@class, 'container')] | Error: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@aria-label='employmentTypeCode']/ancestor::div[contains(@class, 'container')] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'selectFromReactSelect' failed for element: By.xpath: //input[@aria-label='primaryOccupationId']/ancestor::div[contains(@class, 'container')] | Error: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@aria-label='primaryOccupationId']/ancestor::div[contains(@class, 'container')] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'selectFromReactSelect' failed for element: By.xpath: //input[@aria-label='primaryOccupationDesignationId']/ancestor::div[contains(@class, 'container')] | Error: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@aria-label='primaryOccupationDesignationId']/ancestor::div[contains(@class, 'container')] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'typeText' failed for element: By.xpath: //input[@name='organizationName'] | Error: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='organizationName'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'getAttributeValue' failed for element: By.xpath: //input[@name='organizationName'] | Error: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@name='organizationName'] (tried for 5 second(s) with 500 milliseconds interval),
-Organization Name mismatch expected [Tech Corp] but found [],
-Action 'typeText' failed for element: By.xpath: //input[@name='address'] | Error: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='address'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'getAttributeValue' failed for element: By.xpath: //input[@name='address'] | Error: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@name='address'] (tried for 5 second(s) with 500 milliseconds interval),
-Employment Address mismatch expected [Kathmandu] but found [],
-Action 'typeText' failed for element: By.xpath: //input[@name='expectedAnnualIncome'] | Error: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='expectedAnnualIncome'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 148.0.2, moz:accessibilityChecks: false, moz:buildID: 20260309125808, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20932, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 8bfdd3c7-e0a8-4497-9883-19b0f4bea1fd,
-Action 'getAttributeValue' failed for element: By.xpath: //input[@name='expectedAnnualIncome'] | Error: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@name='expectedAnnualIncome'] (tried for 5 second(s) with 500 milliseconds interval),
-Annual Income mismatch expected [1200000] but found []
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.CorporateCustRegTest.verifyEmploymentDetails(CorporateCustRegTest.java:108)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEmploymentDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:57 NPT" name="initSoftAssert" finished-at="2026-03-12T11:26:57 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:32:03 NPT" name="initSoftAssert" finished-at="2026-03-26T10:32:03 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:26:57 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:26:57 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:32:03 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:32:03 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipDetails()[pri:11, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:27:59 NPT" name="verifyRelationshipDetails" description="Verify Relationship Master" finished-at="2026-03-12T11:28:25 NPT" duration-ms="26776" status="PASS">
+        <test-method signature="verifyRelationshipDetails()[pri:10, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:32:03 NPT" name="verifyRelationshipDetails" description="Verify Relationship Master" finished-at="2026-03-26T10:32:30 NPT" duration-ms="27471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:27:59 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:27:59 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:27:59 NPT" name="initSoftAssert" finished-at="2026-03-12T11:27:59 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:32:30 NPT" name="initSoftAssert" finished-at="2026-03-26T10:32:30 NPT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:28:25 NPT" name="initSoftAssert" finished-at="2026-03-12T11:28:25 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:28:25 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:28:25 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:32:30 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:32:30 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipIdentity()[pri:12, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:28:25 NPT" name="verifyRelationshipIdentity" description="Verify Relationship Identity" finished-at="2026-03-12T11:28:44 NPT" duration-ms="18691" status="PASS">
+        <test-method signature="verifyRelationshipIdentity()[pri:11, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:32:30 NPT" name="verifyRelationshipIdentity" description="Verify Relationship Identity" finished-at="2026-03-26T10:32:50 NPT" duration-ms="19792" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipIdentity -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:28:44 NPT" name="initSoftAssert" finished-at="2026-03-12T11:28:44 NPT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:32:50 NPT" name="initSoftAssert" finished-at="2026-03-26T10:32:50 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:28:44 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:28:44 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:32:50 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:32:50 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipCommunication()[pri:13, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:28:44 NPT" name="verifyRelationshipCommunication" description="Verify Relationship Communication" finished-at="2026-03-12T11:28:53 NPT" duration-ms="9244" status="PASS">
+        <test-method signature="verifyRelationshipCommunication()[pri:12, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:32:50 NPT" name="verifyRelationshipCommunication" description="Verify Relationship Communication" finished-at="2026-03-26T10:33:00 NPT" duration-ms="9424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipCommunication -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:28:53 NPT" name="initSoftAssert" finished-at="2026-03-12T11:28:53 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:00 NPT" name="initSoftAssert" finished-at="2026-03-26T10:33:00 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:28:53 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:28:53 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:00 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:33:00 NPT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipDocument()[pri:14, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:28:53 NPT" name="verifyRelationshipDocument" description="Verify Relationship Document" finished-at="2026-03-12T11:29:10 NPT" duration-ms="17112" status="PASS">
+        <test-method signature="verifyRelationshipDocument()[pri:13, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:00 NPT" name="verifyRelationshipDocument" description="Verify Relationship Document" finished-at="2026-03-26T10:33:17 NPT" duration-ms="17898" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipDocument -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:29:10 NPT" name="initSoftAssert" finished-at="2026-03-12T11:29:10 NPT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:17 NPT" name="initSoftAssert" finished-at="2026-03-26T10:33:17 NPT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:29:10 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:29:10 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:17 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:33:17 NPT" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipAddress()[pri:15, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:29:10 NPT" name="verifyRelationshipAddress" description="Verify Relationship Address" finished-at="2026-03-12T11:29:38 NPT" duration-ms="27693" status="PASS">
+        <test-method signature="verifyRelationshipAddress()[pri:14, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:17 NPT" name="verifyRelationshipAddress" description="Verify Relationship Address" finished-at="2026-03-26T10:33:47 NPT" duration-ms="29246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipAddress -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:29:38 NPT" name="initSoftAssert" finished-at="2026-03-12T11:29:38 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:47 NPT" name="initSoftAssert" finished-at="2026-03-26T10:33:47 NPT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipPhoto()[pri:16, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:29:38 NPT" name="verifyRelationshipPhoto" description="Verify Relationship Photo" finished-at="2026-03-12T11:29:44 NPT" duration-ms="6414" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRelationshipPhoto -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:29:38 NPT" name="setupSoftAssert" finished-at="2026-03-12T11:29:38 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:47 NPT" name="setupSoftAssert" finished-at="2026-03-26T10:33:47 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CorporateCustRegTest@7fb8bad0]" started-at="2026-03-12T11:29:44 NPT" name="tearDown" finished-at="2026-03-12T11:29:45 NPT" duration-ms="865" status="PASS">
+        <test-method signature="verifyRelationshipPhoto()[pri:15, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:47 NPT" name="verifyRelationshipPhoto" description="Verify Relationship Photo" finished-at="2026-03-26T10:33:53 NPT" duration-ms="6606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRelationshipPhoto -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CorporateCustRegTest@45a1d057]" started-at="2026-03-26T10:33:53 NPT" name="tearDown" finished-at="2026-03-26T10:33:55 NPT" duration-ms="1261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

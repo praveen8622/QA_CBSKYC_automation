@@ -289,7 +289,8 @@ public class BasePage {
 	public void fillConditionalIdentityField(String type, String fieldValue,
 			By issueOfficeLocator,
 			By localBodyInput,
-			By stateInput) {
+			By stateInput,
+			By districtInput) {
 
 		switch (type) {
 			case "Birth Certificate":
@@ -301,8 +302,8 @@ public class BasePage {
 				}
 				break;
 			case "Citizenship":
-				if (localBodyInput != null) {
-					selectFromDropdown(localBodyInput, fieldValue);
+				if (districtInput != null) {
+					selectFromDropdown(districtInput, fieldValue);
 				}
 				break;
 			case "Driver’s License":

@@ -29,6 +29,7 @@ public class CustRelationshipIdentityPage extends BasePage {
     private By issueOfficeInputLocator = By.name("openIssueOfficeName");
     private By localBodyInputLocator = By.xpath("//input[@aria-label='local Body']");
     private By stateInputLocator = By.xpath("//input[@aria-label='State']");
+    private By districtInputLocator = By.xpath("//input[@aria-label='District']");
 
     private By fileUploadInputLocator = By.xpath("//input[@type='file']");
     private By saveBtnLocator = By.xpath("//button[normalize-space()='Save']");
@@ -151,7 +152,8 @@ public class CustRelationshipIdentityPage extends BasePage {
         fillConditionalIdentityField(type, fieldValue,
                 issueOfficeInputLocator,
                 localBodyInputLocator,
-                stateInputLocator);
+                stateInputLocator,
+                districtInputLocator);
     }
 
     public void uploadDocument(String filePath) {
