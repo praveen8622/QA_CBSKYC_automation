@@ -57,7 +57,6 @@ public class CustTransactionPage extends BasePage {
             LoggerUtil.info("Entering Amount: " + amount);
             typeText(amountLocator, amount);
             assertValueEquals(amountLocator, amount, "Transaction Amount mismatch");
-
             // Enter Count
             LoggerUtil.info("Entering Count: " + count);
             typeText(countLocator, count);

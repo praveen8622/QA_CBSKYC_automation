@@ -159,6 +159,9 @@ public class BaseCustRegWorkflow {
         Thread.sleep(1000);
         addressPage.clickNext();
         Thread.sleep(1000);
+        // customer photo upload
+        addressPage.uploadCustomerPhoto(relativePath);
+        Thread.sleep(1000);
     }
 
     public void fillHighProfileDetails(String fullName) throws InterruptedException {
@@ -386,9 +389,9 @@ public class BaseCustRegWorkflow {
         relationshipAddressPage.selectState("Bagmati");
         Thread.sleep(1000);
         relationshipAddressPage.selectDistrict("Kathmandu");
-        Thread.sleep(1000);
-        relationshipAddressPage.selectTownship("Kathmandu Metropolitan City");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
+        relationshipAddressPage.selectTownship("Kathmandu Metropolitian City");
+        Thread.sleep(2000);
         relationshipAddressPage.enterPostalCode("44600");
         Thread.sleep(1000);
         relationshipAddressPage.enterStreet("Main Street");

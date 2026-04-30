@@ -14,7 +14,7 @@ public class CusRegTest extends BaseTestSequential {
 	private KycCustRegWorkflow kyc;
 	private String testImagePath = "testimages/testdoc.jpg";
 	private String profileImagePath = "testimages/profile.jpg";
-	private boolean isMemberCustomer = true;
+	private boolean isMemberCustomer = false;
 
 	// private String editCustomerName = "PRAKASH BAHADUR KARKI";
 	@BeforeClass
