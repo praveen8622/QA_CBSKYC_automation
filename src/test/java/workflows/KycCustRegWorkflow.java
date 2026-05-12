@@ -70,6 +70,7 @@ public class KycCustRegWorkflow extends BaseCustRegWorkflow {
         reg.selectEducation("Master’s Degree");
         reg.selectMotherLanguage("Nepali");
         reg.selectPreferredCommunicationLanguage("Nepali");
+        reg.selectTaxCategory("Natural Person");
         Thread.sleep(1000);
         reg.clickNextButton();
         Thread.sleep(1000);

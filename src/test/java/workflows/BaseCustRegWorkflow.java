@@ -14,6 +14,7 @@ public class BaseCustRegWorkflow {
     protected CustCommunicationPage communicationPage;
     protected CustDocument documentPage;
     protected CustAddressPage addressPage;
+    protected CustPhotoPage photoPage;
     protected CustHighProfilePage highProfilePage;
     protected CustTransactionPage transactionPage;
     protected CustCashFlowPage cashFlowPage;
@@ -25,6 +26,7 @@ public class BaseCustRegWorkflow {
     protected CustRelationshipDocumentPage relationshipDocumentPage;
     protected CustRelationshipAddressPage relationshipAddressPage;
     protected CustRelationshipPhoto relationshipPhotoPage;
+    protected CustApprovalPage approvalPage;
 
     public BaseCustRegWorkflow(WebDriver driver, SoftAssert softAssert) {
         this.driver = driver;
@@ -38,6 +40,7 @@ public class BaseCustRegWorkflow {
         communicationPage = new CustCommunicationPage(driver);
         documentPage = new CustDocument(driver);
         addressPage = new CustAddressPage(driver);
+        photoPage = new CustPhotoPage(driver);
         highProfilePage = new CustHighProfilePage(driver);
         transactionPage = new CustTransactionPage(driver);
         cashFlowPage = new CustCashFlowPage(driver);
@@ -49,6 +52,7 @@ public class BaseCustRegWorkflow {
         relationshipDocumentPage = new CustRelationshipDocumentPage(driver);
         relationshipAddressPage = new CustRelationshipAddressPage(driver);
         relationshipPhotoPage = new CustRelationshipPhoto(driver);
+        approvalPage = new CustApprovalPage(driver);
         syncBaseSoftAssert();
     }
 
@@ -69,6 +73,7 @@ public class BaseCustRegWorkflow {
         relationshipDocumentPage.setSoftAssert(softAssert);
         relationshipAddressPage.setSoftAssert(softAssert);
         relationshipPhotoPage.setSoftAssert(softAssert);
+        approvalPage.setSoftAssert(softAssert);
     }
 
     public void updateSoftAssert(SoftAssert newSoftAssert) {
@@ -80,12 +85,31 @@ public class BaseCustRegWorkflow {
     // Shared Business Flows
     // ================================
 
-    public void fillIdentityDetails(String licenseNumber, String relativePath) throws InterruptedException {
+    public void fillIdentityDetails(String documentNum, String relativePath) throws InterruptedException {
         custRegHomePage.navigateToIdentityTab();
         identityPage.openAddIdentityForm();
         Thread.sleep(1000);
         identityPage.selectIdentityTypeAndFillConditionalField("Citizenship", "Kathmandu");
-        identityPage.enterIdentityNumber(licenseNumber);
+        identityPage.enterIdentityNumber(documentNum);
+        Thread.sleep(1000);
+        identityPage.selectIssueDate("2020", "March", "29");
+        Thread.sleep(1000);
+        // identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
+        Thread.sleep(1000);
+        identityPage.uploadIdentityDocument(relativePath);
+        Thread.sleep(1000);
+        identityPage.clickSaveIdentity();
+        Thread.sleep(1000);
+        identityPage.clickNextbutton();
+        Thread.sleep(1000);
+    }
+
+    public void fillIdentityDetailsCorporate(String documentNum, String relativePath) throws InterruptedException {
+        custRegHomePage.navigateToIdentityTab();
+        identityPage.openAddIdentityForm();
+        Thread.sleep(1000);
+        identityPage.selectIdentityTypeAndFillConditionalField("Company Registration Certificate", "DAO");
+        identityPage.enterIdentityNumber(documentNum);
         Thread.sleep(1000);
         identityPage.selectIssueDate("2020", "March", "29");
         Thread.sleep(1000);
@@ -120,8 +144,8 @@ public class BaseCustRegWorkflow {
     public void fillDocumentDetails(String passportNumber, String relativePath) throws InterruptedException {
         custRegHomePage.navigateToDocumentTab();
         documentPage.clickAddDocument();
-        documentPage.selectDocumentType("Passport");
-        documentPage.enterDocumentTitle("Passport");
+        documentPage.selectDocumentType("National Identity");
+        documentPage.enterDocumentTitle("NID");
         documentPage.enterDocumentNumber(passportNumber);
         Thread.sleep(1000);
         documentPage.uploadDocument(relativePath);
@@ -147,20 +171,25 @@ public class BaseCustRegWorkflow {
         Thread.sleep(1000);
         addressPage.enterWardNo("123");
         Thread.sleep(1000);
-        addressPage.enterHouseNo("342");
-        Thread.sleep(1000);
-        addressPage.enterLatitude("27.7172");
-        Thread.sleep(1000);
-        addressPage.enterLongitude("85.3240");
+        // addressPage.enterHouseNo("342");
+        // Thread.sleep(1000);
+        // addressPage.enterLatitude("27.7172");
+        // Thread.sleep(1000);
+        // addressPage.enterLongitude("85.3240");
         Thread.sleep(1000);
         addressPage.uploadAddressDocument(relativePath);
         Thread.sleep(1000);
         addressPage.clickSave();
         Thread.sleep(1000);
         addressPage.clickNext();
+    }
+
+    public void fillCustomerPhoto(String relativePath) throws InterruptedException {
+        custRegHomePage.navigateToPhotoTab();
         Thread.sleep(1000);
-        // customer photo upload
-        addressPage.uploadCustomerPhoto(relativePath);
+        photoPage.uploadPhoto(relativePath);
+        Thread.sleep(1000);
+        photoPage.clickSaveButton();
         Thread.sleep(1000);
     }
 
@@ -265,11 +294,11 @@ public class BaseCustRegWorkflow {
             relationshipPage.selectBirthCountry("Nepal");
             Thread.sleep(1000);
             relationshipPage.selectMaritalStatus("Married");
-            Thread.sleep(1000);
-            relationshipPage.selectOccupation("Education");
-            Thread.sleep(1000);
-            relationshipPage.selectEducation("Master’s Degree");
-            Thread.sleep(2000);
+            // Thread.sleep(1000);
+            // relationshipPage.selectOccupation("Education");
+            // Thread.sleep(1000);
+            // relationshipPage.selectEducation("Master’s Degree");
+            // Thread.sleep(2000);
         }
 
         relationshipPage.clickNext();
@@ -326,17 +355,14 @@ public class BaseCustRegWorkflow {
         Thread.sleep(2000);
         relationshipIdentityPage.clickAddIdentity();
         Thread.sleep(2000);
-        relationshipIdentityPage.selectIdentityTypeAndFillConditionalField("Driver’s License", "Bagmati Province");
+        relationshipIdentityPage.selectIdentityTypeAndFillConditionalField("Citizenship", "Kathmandu");
         Thread.sleep(2000);
         relationshipIdentityPage.enterIdentityNumber(licenseNumber);
         Thread.sleep(1000);
-        relationshipIdentityPage.selectIssueDate("2021", "January", "1");
-        Thread.sleep(1000);
-        // relationshipIdentityPage.handleExpiryDateIfApplicable("2031", "January",
-        // "1");
-        Thread.sleep(1000);
+        relationshipIdentityPage.selectIssueDate("2021", "January", "10");
+        Thread.sleep(2000);
         relationshipIdentityPage.uploadDocument(relativePath);
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         relationshipIdentityPage.clickSave();
         Thread.sleep(2000);
         relationshipIdentityPage.clickNext();
@@ -363,13 +389,11 @@ public class BaseCustRegWorkflow {
         Thread.sleep(1000);
         relationshipDocumentPage.clickAddDocument();
         Thread.sleep(1000);
-        relationshipDocumentPage.selectDocumentType("Citizenship");
+        relationshipDocumentPage.selectDocumentType("National ID");
         Thread.sleep(1000);
-        relationshipDocumentPage.enterDocumentTitle("Citizenship Front");
+        relationshipDocumentPage.enterDocumentTitle("NID");
         Thread.sleep(1000);
         relationshipDocumentPage.enterDocumentNumber(docNumber);
-        Thread.sleep(1000);
-        relationshipDocumentPage.selectMimeType("image/png");
         Thread.sleep(1000);
         relationshipDocumentPage.uploadDocument(relativePath);
         Thread.sleep(1000);
@@ -394,15 +418,15 @@ public class BaseCustRegWorkflow {
         Thread.sleep(2000);
         relationshipAddressPage.enterPostalCode("44600");
         Thread.sleep(1000);
-        relationshipAddressPage.enterStreet("Main Street");
-        Thread.sleep(1000);
+        // relationshipAddressPage.enterStreet("Main Street");
+        // Thread.sleep(1000);
         relationshipAddressPage.enterWardNo("4");
-        Thread.sleep(1000);
-        relationshipAddressPage.enterHouseNo("123");
-        Thread.sleep(1000);
-        relationshipAddressPage.enterLatitude("27.7172");
-        Thread.sleep(1000);
-        relationshipAddressPage.enterLongitude("85.3240");
+        // Thread.sleep(1000);
+        // relationshipAddressPage.enterHouseNo("123");
+        // Thread.sleep(1000);
+        // relationshipAddressPage.enterLatitude("27.7172");
+        // Thread.sleep(1000);
+        // relationshipAddressPage.enterLongitude("85.3240");
         Thread.sleep(1000);
         relationshipAddressPage.clickSave();
         Thread.sleep(2000);
@@ -420,6 +444,13 @@ public class BaseCustRegWorkflow {
         // relationshipPhotoPage.clickCloseButton();
         // Thread.sleep(2000);
         relationshipPhotoPage.clickNextButton();
+        Thread.sleep(2000);
+    }
+
+    public void sendApproval() throws InterruptedException {
+        approvalPage.clickAdditionalFormTab();
+        Thread.sleep(2000);
+        approvalPage.clickSendForApprovalButton();
         Thread.sleep(2000);
     }
 
@@ -447,4 +478,5 @@ public class BaseCustRegWorkflow {
         relationshipPhotoPage.clickSaveButton();
         Thread.sleep(2000);
     }
+
 }

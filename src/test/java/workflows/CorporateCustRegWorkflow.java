@@ -44,7 +44,7 @@ public class CorporateCustRegWorkflow extends BaseCustRegWorkflow {
         custRegHomePage.clickAddCustomerRegistration();
 
         // Select Legal Entities (This will show the Corporate Customer form)
-        corpRegPage.chooseLegalStatus("Legal Entities");
+        corpRegPage.chooseLegalStatus("Private Limited Company");
         Thread.sleep(1000);
 
         // Fill Corporate Customer Details
@@ -65,6 +65,7 @@ public class CorporateCustRegWorkflow extends BaseCustRegWorkflow {
         corpRegPage.selectCountry("Nepal");
         Thread.sleep(2000);
         corpRegPage.selectIsForeignResident(false);
+        corpRegPage.selectTaxCategory("Natural Person");
 
         Thread.sleep(2000);
         corpRegPage.clickProceedButton();

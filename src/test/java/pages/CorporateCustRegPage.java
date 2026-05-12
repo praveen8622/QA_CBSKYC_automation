@@ -32,6 +32,7 @@ public class CorporateCustRegPage extends BasePage {
     private By obligorLocator = By.cssSelector("input[aria-label='Obligor']");
     private By countryLocator = By.cssSelector("input[aria-label='Country']");
     private By foreignCheckboxLocator = By.xpath("//input[@name='isForeign']");
+    private By taxCategoryLocator = By.xpath("//input[@aria-label='Tax Category']");
 
     // Actions Locators
     private By nextBtnLocator = By.xpath("//button[.//div[normalize-space()='Proceed']]");
@@ -111,6 +112,11 @@ public class CorporateCustRegPage extends BasePage {
         if (isForeignValue != isSelected(foreignCheckboxLocator)) {
             click(foreignCheckboxLocator);
         }
+    }
+
+    public void selectTaxCategory(String taxCategoryValue) {
+        LoggerUtil.info("Selecting '" + taxCategoryValue + "' from Tax Category dropdown");
+        selectFromDropdown(taxCategoryLocator, taxCategoryValue);
     }
 
     public void clickProceedButton() {

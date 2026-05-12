@@ -28,8 +28,8 @@ public class CustRelationshipAddressPage extends BasePage {
     private By districtInputLocator = By.xpath("//input[@aria-label='District']");
 
     private By townshipContainerLocator = By
-            .xpath("//input[@aria-label='Township']/ancestor::div[contains(@class, 'container')]");
-    private By townshipInputLocator = By.xpath("//input[@aria-label='Township']");
+            .xpath("//input[@aria-label='Local Body']/ancestor::div[contains(@class, 'container')]");
+    private By townshipInputLocator = By.xpath("//input[@aria-label='Local Body']");
 
     private By quarterContainerLocator = By
             .xpath("//input[@aria-label='Quarter']/ancestor::div[contains(@class, 'container')]");

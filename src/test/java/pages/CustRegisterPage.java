@@ -37,6 +37,7 @@ public class CustRegisterPage extends BasePage {
 	private By educationLocator = By.xpath("//input[@aria-label='Education']");
 	private By motherlanguageLocator = By.xpath("//input[@aria-label='Mother Language']");
 	private By prreferredCommunicationLocator = By.xpath("//input[@aria-label='Preferred Communication Language']");
+	private By taxCategoryLocator = By.xpath("//input[@aria-label='Tax Category']");
 
 	// =================================================
 	// Birth Details Locators
@@ -191,6 +192,11 @@ public class CustRegisterPage extends BasePage {
 	public void selectPreferredCommunicationLanguage(String preferredLanguageValue) {
 		LoggerUtil.info("Selecting '" + preferredLanguageValue + "' from Preferred Communication Language dropdown");
 		selectFromDropdown(prreferredCommunicationLocator, preferredLanguageValue);
+	}
+
+	public void selectTaxCategory(String taxCategoryValue) {
+		LoggerUtil.info("Selecting '" + taxCategoryValue + "' from Tax Category dropdown");
+		selectFromDropdown(taxCategoryLocator, taxCategoryValue);
 	}
 
 	// =================================================

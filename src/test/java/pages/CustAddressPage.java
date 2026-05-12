@@ -47,8 +47,8 @@ public class CustAddressPage extends BasePage {
     private By saveButtonLocator = By.xpath("//button[.//div[text()='Save']]");
     private By nextButtonLocator = By.xpath("//button[@title='Next Step']");
 
-    private By photoUploadLocator = By.xpath("//input[@type='file']");
-    private By saveBtnLocator = By.xpath("//button[.//div[text()='Save']]");
+    private By photoUploadLocator = By.cssSelector("input[type='file']");
+    private By savePhotoBtnLocator = By.xpath("//button[.//div[text()='Save']]");
 
     // ================================
     // Constructor
@@ -155,13 +155,12 @@ public class CustAddressPage extends BasePage {
     public void uploadCustomerPhoto(String filePath) {
         LoggerUtil.info("Uploading Customer Photo from path: " + filePath);
         uploadFile(photoUploadLocator, filePath);
-        clickSaveBtn();
         LoggerUtil.info("Customer Photo uploaded successfully");
     }
 
-    private void clickSaveBtn() {
-        LoggerUtil.info("Clicking 'Save' button on Address page");
-        click(saveBtnLocator);
+    public void clickSavePhotoBtn() {
+        LoggerUtil.info("Clicking 'Save' button on Photo page");
+        click(savePhotoBtnLocator);
         LoggerUtil.info("Save button clicked successfully");
     }
 }

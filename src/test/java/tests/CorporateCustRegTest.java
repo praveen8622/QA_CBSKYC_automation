@@ -36,7 +36,7 @@ public class CorporateCustRegTest extends BaseTestSequential {
         // Assuming common dropdown values are available in the mock/actual data:
         // Adjust "Company Registrar" and "Main Entity" based on actual dropdown list if
         // needed.
-        corpKyc.fillPrimaryRegistration(companyName, "Company", registeredNumber, "Nepal Electricity");
+        corpKyc.fillPrimaryRegistration(companyName, "Company", registeredNumber, "EURICA INVESTMENT PVT.LTD");
 
         softAssert.assertAll();
     }
@@ -44,7 +44,7 @@ public class CorporateCustRegTest extends BaseTestSequential {
     @Test(priority = 2, description = "Verify Identity Details")
     public void verifyIdentityDetails() throws InterruptedException {
         LoggerUtil.title("Identity Details test started");
-        corpKyc.fillIdentityDetails(DataGenerator.generateRandomLicense(),
+        corpKyc.fillIdentityDetailsCorporate(DataGenerator.generateRandomLicense(),
                 testImagePath);
         softAssert.assertAll();
     }
@@ -59,7 +59,7 @@ public class CorporateCustRegTest extends BaseTestSequential {
     @Test(priority = 4, description = "Verify Document Details")
     public void verifyDocumentDetails() throws InterruptedException {
         LoggerUtil.title("Document Details test started");
-        corpKyc.fillDocumentDetails(DataGenerator.generateRandomPassport(),
+        corpKyc.fillDocumentDetails(DataGenerator.generateRandomNumber(7),
                 testImagePath);
         softAssert.assertAll();
     }
@@ -107,7 +107,6 @@ public class CorporateCustRegTest extends BaseTestSequential {
 
         String firstName = DataGenerator.generateRandomfirstName();
         String lastName = DataGenerator.generateRandomlastName();
-        // Since it's corporate, let's test a Shareholder scenario
         corpKyc.fillCorporateRelationshipMaster(isMemberCustomer, "", "Board of Directors", firstName, lastName);
         softAssert.assertAll();
     }
@@ -172,6 +171,13 @@ public class CorporateCustRegTest extends BaseTestSequential {
             return;
         }
         corpKyc.fillRelationshipPhoto(profileImagePath);
+        softAssert.assertAll();
+    }
+
+    @Test(priority = 16, description = "verify Send Approval")
+    public void sendApproval() throws InterruptedException {
+        LoggerUtil.title("Send Approval test started");
+        corpKyc.sendApproval();
         softAssert.assertAll();
     }
 

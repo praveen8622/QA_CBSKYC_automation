@@ -14,9 +14,11 @@ public class CusRegTest extends BaseTestSequential {
 	private KycCustRegWorkflow kyc;
 	private String testImagePath = "testimages/testdoc.jpg";
 	private String profileImagePath = "testimages/profile.jpg";
+	private String customerPhotoPath = "testimages/pp.jpg";
+
 	private boolean isMemberCustomer = false;
 
-	// private String editCustomerName = "PRAKASH BAHADUR KARKI";
+	// private String editCustomerName = "";
 	@BeforeClass
 	public void pageSetup() {
 		kyc = new KycCustRegWorkflow(driver, softAssert);
@@ -64,11 +66,18 @@ public class CusRegTest extends BaseTestSequential {
 	@Test(priority = 5, description = "Verify Address Details")
 	public void verifyAddressDetails() throws InterruptedException {
 		LoggerUtil.title("Address Details test started");
-		kyc.fillAddressDetails(testImagePath);
+		kyc.fillAddressDetails(customerPhotoPath);
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 6, description = "Verify High Profile Details")
+	@Test(priority = 6, description = "Verify Customer Photo")
+	public void verifyCustomerPhoto() throws InterruptedException {
+		LoggerUtil.title("Customer Photo test started");
+		kyc.fillCustomerPhoto(customerPhotoPath);
+		softAssert.assertAll();
+	}
+
+	@Test(priority = 7, description = "Verify High Profile Details")
 	public void verifyHighProfileDetails() throws InterruptedException {
 		LoggerUtil.title("High Profile Details test started");
 		String fullName = DataGenerator.generateRandomfirstName() + " " + DataGenerator.generateRandomlastName();
@@ -76,35 +85,35 @@ public class CusRegTest extends BaseTestSequential {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 7, description = "Verify Transaction Details")
+	@Test(priority = 8, description = "Verify Transaction Details")
 	public void verifyTransactionDetails() throws InterruptedException {
 		LoggerUtil.title("Transaction Details test started");
 		kyc.fillTransactionDetails();
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 8, description = "Verify Cash Flow Details")
+	@Test(priority = 9, description = "Verify Cash Flow Details")
 	public void verifyCashFlowDetails() throws InterruptedException {
 		LoggerUtil.title("Cash Flow Details test started");
 		kyc.fillCashFlowDetails();
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 9, description = "Verify Exposure Details")
+	@Test(priority = 10, description = "Verify Exposure Details")
 	public void verifyExposureDetails() throws InterruptedException {
 		LoggerUtil.title("Exposure Details test started");
 		kyc.fillExposureDetails();
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 10, description = "Verify Employment Details")
+	@Test(priority = 11, description = "Verify Employment Details")
 	public void verifyEmploymentDetails() throws InterruptedException {
 		LoggerUtil.title("Employment Details test started");
 		kyc.fillEmploymentDetails();
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 11, description = "Verify Relationship Master")
+	@Test(priority = 12, description = "Verify Relationship Master")
 	public void verifyRelationshipDetails() throws InterruptedException {
 		LoggerUtil.title("Relationship Details test started");
 
@@ -114,7 +123,7 @@ public class CusRegTest extends BaseTestSequential {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 12, description = "Verify Relationship Identity")
+	@Test(priority = 13, description = "Verify Relationship Identity")
 	public void verifyRelationshipIdentity() throws InterruptedException {
 		LoggerUtil.title("Relationship Identity Details test started");
 		if (isMemberCustomer) {
@@ -129,7 +138,7 @@ public class CusRegTest extends BaseTestSequential {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 13, description = "Verify Relationship Communication")
+	@Test(priority = 14, description = "Verify Relationship Communication")
 	public void verifyRelationshipCommunication() throws InterruptedException {
 		LoggerUtil.title("Relationship Communication Details test started");
 		if (isMemberCustomer) {
@@ -143,7 +152,7 @@ public class CusRegTest extends BaseTestSequential {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 14, description = "Verify Relationship Document")
+	@Test(priority = 15, description = "Verify Relationship Document")
 	public void verifyRelationshipDocument() throws InterruptedException {
 		LoggerUtil.title("Relationship Document Details test started");
 		if (isMemberCustomer) {
@@ -157,7 +166,7 @@ public class CusRegTest extends BaseTestSequential {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 15, description = "Verify Relationship Address")
+	@Test(priority = 16, description = "Verify Relationship Address")
 	public void verifyRelationshipAddress() throws InterruptedException {
 		LoggerUtil.title("Relationship Address Details test started");
 		if (isMemberCustomer) {
@@ -171,7 +180,7 @@ public class CusRegTest extends BaseTestSequential {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 16, description = "Verify Relationship Photo")
+	@Test(priority = 17, description = "Verify Relationship Photo")
 	public void verifyRelationshipPhoto() throws InterruptedException {
 		LoggerUtil.title("Relationship Photo test started");
 		if (isMemberCustomer) {
@@ -184,4 +193,33 @@ public class CusRegTest extends BaseTestSequential {
 		kyc.fillRelationshipPhoto(profileImagePath);
 		softAssert.assertAll();
 	}
+
+	@Test(priority = 18, description = "verify Send Approval")
+	public void sendApproval() throws InterruptedException {
+		LoggerUtil.title("Send Approval test started");
+		kyc.sendApproval();
+		softAssert.assertAll();
+	}
+
+	// @Test(invocationCount = 1)
+	// public void fullFlow() throws InterruptedException {
+	// verifyCustomerRegistration();
+	// verifyIdentityDetails();
+	// verifyCommunicationDetails();
+	// verifyDocumentDetails();
+	// verifyAddressDetails();
+	// verifyCustomerPhoto();
+	// // verifyHighProfileDetails();
+	// // verifyTransactionDetails();
+	// // verifyCashFlowDetails();
+	// // verifyExposureDetails();
+	// // verifyEmploymentDetails();
+	// verifyRelationshipDetails();
+	// verifyRelationshipIdentity();
+	// verifyRelationshipCommunication();
+	// verifyRelationshipDocument();
+	// verifyRelationshipAddress();
+	// verifyRelationshipPhoto();
+	// sendApproval();
+	// }
 }
