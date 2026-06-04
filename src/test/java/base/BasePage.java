@@ -274,18 +274,7 @@ public class BasePage {
 	// ================================
 	// Common Identity Logic
 	// ================================
-	/**
-	 * Fills the corresponding conditional field based on the Identity Type.
-	 * 
-	 * @param type               The identity type selected.
-	 * @param fieldValue         The value to enter in the office/local body/state
-	 *                           field.
-	 * @param issueOfficeLocator Locator for the Issue Office input.
-	 * @param localBodyContainer Locator for the Local Body React-Select container.
-	 * @param localBodyInput     Locator for the Local Body React-Select input.
-	 * @param stateContainer     Locator for the State React-Select container.
-	 * @param stateInput         Locator for the State React-Select input.
-	 */
+
 	public void fillConditionalIdentityField(String type, String fieldValue,
 			By issueOfficeLocator,
 			By localBodyInput,

@@ -65,7 +65,7 @@ public class CorporateCustRegWorkflow extends BaseCustRegWorkflow {
         corpRegPage.selectCountry("Nepal");
         Thread.sleep(2000);
         corpRegPage.selectIsForeignResident(false);
-        corpRegPage.selectTaxCategory("Natural Person");
+//        corpRegPage.selectTaxCategory("Natural Person");
 
         Thread.sleep(2000);
         corpRegPage.clickProceedButton();
