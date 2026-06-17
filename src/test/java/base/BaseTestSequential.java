@@ -61,7 +61,7 @@ public class BaseTestSequential {
                 }
             } else if (browser.equalsIgnoreCase("firefox")) {
                 FirefoxOptions options = new FirefoxOptions();
-                options.addPreference("security.enterprise_roots.enabled", true);
+//                options.addPreference("security.enterprise_roots.enabled", true);
                 if (headless) {
                     options.addArguments("-headless");
                 }
@@ -90,7 +90,7 @@ public class BaseTestSequential {
                 driver = new ChromeDriver(options);
             } else if (browser.equalsIgnoreCase("firefox")) {
                 FirefoxOptions options = new FirefoxOptions();
-                options.addPreference("security.enterprise_roots.enabled", true);
+//                options.addPreference("security.enterprise_roots.enabled", true);
                 if (headless) {
                     options.addArguments("-headless");
                 }
