@@ -21,6 +21,7 @@ Runs just one test class. Useful when you are debugging a specific feature.
 ```bash
 # Example: Run only the CorporateCustRegTest
 mvn test -Dtest=CorporateCustRegTest
+mvn test -Dtest=CusRegTest
 ```
 
 ### 4. Run a Specific Test Method (Test Case)
