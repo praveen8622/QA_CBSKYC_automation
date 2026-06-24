@@ -109,13 +109,13 @@ public class BaseTestSequential {
     public void startVideoRecord(Method method) {
         softAssert = new SoftAssert();
         // Starts recording automatically before every test execution
-        ScreenRecorderUtil.startRecording(method.getName());
+        // ScreenRecorderUtil.startRecording(method.getName());
     }
 
     @AfterMethod
     public void stopVideoRecord() {
         // Stops recording automatically after every test execution
-        ScreenRecorderUtil.stopRecording();
+        // ScreenRecorderUtil.stopRecording();
     }
 
     @AfterClass
