@@ -176,7 +176,7 @@ public class CustRelationshipPage extends BasePage {
 
     public void selectEducation(String education) {
         LoggerUtil.info("Selecting Education: " + education);
-        selectFromReactSelect(educationContainerBy, educationInputBy, education);
+        selectFromDropdown( educationInputBy, education);
     }
 
     public void clickNext() {

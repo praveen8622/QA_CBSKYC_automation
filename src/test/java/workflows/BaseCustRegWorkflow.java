@@ -343,8 +343,8 @@ public class BaseCustRegWorkflow {
             Thread.sleep(1000);
             relationshipPage.selectOccupation("Service");
             Thread.sleep(1000);
-            relationshipPage.selectEducation("Master’s Degree");
-            Thread.sleep(2000);
+            // relationshipPage.selectEducation("Master’s Degree");
+            // Thread.sleep(2000);
         }
 
         relationshipPage.clickNext();
