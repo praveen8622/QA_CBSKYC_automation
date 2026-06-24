@@ -1,6 +1,7 @@
 package utilities;
 
 import java.io.File;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class FileUtil {
@@ -14,7 +15,11 @@ public class FileUtil {
             throw new RuntimeException("File not found in classpath: " + relativePath);
         }
 
-        return new File(resourceUrl.getFile()).getAbsolutePath();
+        try {
+            return new File(resourceUrl.toURI()).getAbsolutePath();
+        } catch (URISyntaxException e) {
+            throw new RuntimeException("Failed to decode resource URL: " + resourceUrl, e);
+        }
     }
 
     // Validate file exists
