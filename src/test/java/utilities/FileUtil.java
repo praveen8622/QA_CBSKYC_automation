@@ -1,25 +1,20 @@
 package utilities;
 
 import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.net.URL;
 
 public class FileUtil {
 
-    private static final String BASE_RESOURCE_PATH = Paths.get(System.getProperty("user.dir"),
-            "src", "test", "resources").toString();
-
-    // Get file from src/test/resources
+    // Get file from classpath (src/test/resources is on the classpath)
     public static String getFileFromResources(String relativePath) {
+        ClassLoader classLoader = FileUtil.class.getClassLoader();
+        URL resourceUrl = classLoader.getResource(relativePath);
 
-        Path fullPath = Paths.get(BASE_RESOURCE_PATH, relativePath);
-
-        if (!Files.exists(fullPath)) {
-            throw new RuntimeException("File not found: " + fullPath);
+        if (resourceUrl == null) {
+            throw new RuntimeException("File not found in classpath: " + relativePath);
         }
 
-        return fullPath.toAbsolutePath().toString();
+        return new File(resourceUrl.getFile()).getAbsolutePath();
     }
 
     // Validate file exists
