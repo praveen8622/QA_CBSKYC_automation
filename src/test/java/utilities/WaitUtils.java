@@ -1,7 +1,8 @@
 package utilities;
 
-import org.openqa.selenium.By;
+import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,7 +12,10 @@ public class WaitUtils {
 	private WebDriverWait wait;
 
 	public WaitUtils(WebDriver driver) {
-		this.wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(5));
+		Properties prop = ConfigReader.getProperties();
+		int timeout = Integer.parseInt(System.getProperty("timeout",
+				prop.getProperty("timeout", "30")));
+		this.wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(timeout));
 	}
 
 	public WebElement waitForElementToBeClickable(By locator) {
