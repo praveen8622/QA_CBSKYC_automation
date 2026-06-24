@@ -145,6 +145,7 @@ public class BaseCustRegWorkflow {
         custRegHomePage.navigateToDocumentTab();
         documentPage.clickAddDocument();
         documentPage.selectDocumentType("National Identity");
+        Thread.sleep(1000);
         documentPage.enterDocumentTitle("NID");
         documentPage.enterDocumentNumber(passportNumber);
         Thread.sleep(1000);

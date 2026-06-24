@@ -24,7 +24,7 @@ public class AllureListener implements ITestListener {
     public void onTestFailure(ITestResult result) {
         Object testClass = result.getInstance();
         WebDriver driver = ((BaseTestSequential) testClass).getDriver();
-
+  
         // 1. Capture Screenshot only on failure
         if (driver != null) {
             saveScreenshotPNG(driver);
