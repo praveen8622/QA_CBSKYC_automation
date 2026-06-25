@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -56,6 +57,7 @@ public class BaseTestSequential {
                 }
                 try {
                     driver = new RemoteWebDriver(new URL(remoteUrl), options);
+                    ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
                 } catch (MalformedURLException e) {
                     throw new RuntimeException("Invalid remote URL: " + remoteUrl, e);
                 }
@@ -67,6 +69,7 @@ public class BaseTestSequential {
                 }
                 try {
                     driver = new RemoteWebDriver(new URL(remoteUrl), options);
+                    ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
                 } catch (MalformedURLException e) {
                     throw new RuntimeException("Invalid remote URL: " + remoteUrl, e);
                 }
