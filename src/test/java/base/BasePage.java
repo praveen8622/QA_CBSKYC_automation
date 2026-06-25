@@ -6,6 +6,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.testng.asserts.SoftAssert;
 
 import utilities.FileUtil;
@@ -31,30 +34,68 @@ public class BasePage {
 	// Basic Actions
 	// ================================
 	protected void click(By locator) {
-		try {
-			WebElement element = wait.waitForElementToBeClickable(locator);
-			element.click();
-		} catch (Exception e) {
-			handleActionException("click", locator, e);
+		int attempts = 0;
+		while (attempts < 3) {
+			try {
+				WebElement element = wait.waitForElementToBeClickable(locator);
+				element.click();
+				return;
+			} catch (StaleElementReferenceException | ElementNotInteractableException e) {
+				attempts++;
+				if (attempts == 3) {
+					LoggerUtil.info("Retries exhausted, attempting JS click for locator: " + locator);
+					try {
+						WebElement element = wait.waitForElementToBePresent(locator);
+						clickUsingJS(element);
+						return;
+					} catch (Exception jsException) {
+						handleActionException("click (JS fallback failed)", locator, jsException);
+					}
+				}
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException ignored) {
+				}
+			} catch (Exception e) {
+				handleActionException("click", locator, e);
+				return;
+			}
 		}
 	}
 
 	protected void typeText(By locator, String text) {
-		try {
-			WebElement element = wait.waitForElementToBeVisible(locator);
-			element.click();
-			element.clear();
-			element.sendKeys(text);
-		} catch (Exception e) {
-			handleActionException("typeText", locator, e);
+		int attempts = 0;
+		while (attempts < 3) {
+			try {
+				WebElement element = wait.waitForElementToBeVisible(locator);
+				element.click();
+				element.clear();
+				element.sendKeys(text);
+				return;
+			} catch (StaleElementReferenceException
+					| ElementNotInteractableException e) {
+				attempts++;
+				if (attempts == 3) {
+					handleActionException("typeText", locator, e);
+				}
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException ignored) {
+				}
+			} catch (Exception e) {
+				handleActionException("typeText", locator, e);
+				return;
+			}
 		}
 	}
 
 	protected void selectFromDropdown(By locator, String value) {
+
 		if (value == null || value.trim().isEmpty())
 			return;
 		try {
-			WebElement element = wait.waitForElementToBeClickable(locator);
+			WebElement element = wait.waitForElementToBeVisible(locator);
+
 			element.click();
 			element.sendKeys(value);
 			element.sendKeys(Keys.ENTER);
@@ -63,20 +104,46 @@ public class BasePage {
 		}
 	}
 
+	public void scrollToElement(By locator) {
+
+		WebElement element = wait.waitForElementToBeVisible(locator);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		js.executeScript(
+				"arguments[0].scrollIntoView(true);",
+				element);
+	}
+
 	// ================================
 	// React-Select handler (STABLE)
 	// ================================
 	protected void selectFromReactSelect(By containerLocator, By inputLocator, String value) {
-		try {
-			WebElement container = wait.waitForElementToBeClickable(containerLocator);
-			container.click();
+		int attempts = 0;
+		while (attempts < 3) {
+			try {
+				WebElement container = wait.waitForElementToBeClickable(containerLocator);
+				container.click();
 
-			WebElement input = wait.waitForElementToBeVisible(inputLocator);
-			input.sendKeys(value);
-			Thread.sleep(2000);
-			input.sendKeys(Keys.ENTER);
-		} catch (Exception e) {
-			handleActionException("selectFromReactSelect", containerLocator, e);
+				WebElement input = wait.waitForElementToBeVisible(inputLocator);
+				input.sendKeys(value);
+				Thread.sleep(1000); // Wait for React dropdown to update
+				input.sendKeys(Keys.ENTER);
+				return;
+			} catch (StaleElementReferenceException
+					| ElementNotInteractableException e) {
+				attempts++;
+				if (attempts == 3) {
+					handleActionException("selectFromReactSelect", containerLocator, e);
+				}
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException ignored) {
+				}
+			} catch (Exception e) {
+				handleActionException("selectFromReactSelect", containerLocator, e);
+				return;
+			}
 		}
 	}
 

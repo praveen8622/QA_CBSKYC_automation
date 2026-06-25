@@ -18,7 +18,6 @@ public class CusRegTest extends BaseTestSequential {
 
 	private boolean isMemberCustomer = false;
 
-	// private String editCustomerName = "";
 	@BeforeClass
 	public void pageSetup() {
 		kyc = new KycCustRegWorkflow(driver, softAssert);

@@ -1,5 +1,7 @@
 package workflows;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 import pages.*;
@@ -42,7 +44,6 @@ public class KycCustRegWorkflow extends BaseCustRegWorkflow {
         homePage.navigateToCustomerScreening();
         custScreeningPage.enterFullName(fullName);
         custScreeningPage.clickSearch();
-        Thread.sleep(2000);
         return custScreeningPage.getScreeningId();
     }
 
@@ -52,28 +53,24 @@ public class KycCustRegWorkflow extends BaseCustRegWorkflow {
 
         reg.chooseLegalStatus("Individual");
         reg.enterScreeningId(screeningId);
-        Thread.sleep(1000);
         reg.isEmployee("No");
-        Thread.sleep(1000);
         reg.enterMaidenName(lastName);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         reg.selectBirthDate("1995", "March", "29");
-        Thread.sleep(1000);
         reg.enterBirthCountry("Nepal");
         reg.enterBirthAddressIfApplicable("Nepal");
         reg.selectIsForeign(false, "India");
         reg.selectIsPEP(false, "Domestic pep");
         reg.selectGender("male");
         reg.selectOnboardingChannel("Physical");
+
         reg.selectMaritalStatus("Single");
         reg.selectReligion("Hindu");
         reg.selectEducation("Master’s Degree");
         reg.selectMotherLanguage("Nepali");
         reg.selectPreferredCommunicationLanguage("Nepali");
         reg.selectTaxCategory("Natural Person");
-        Thread.sleep(1000);
         reg.clickNextButton();
-        Thread.sleep(1000);
     }
 
     public void resumeDraft(String fullName) {

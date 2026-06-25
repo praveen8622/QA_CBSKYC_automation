@@ -1,5 +1,8 @@
 package pages;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import base.BasePage;
@@ -44,9 +47,9 @@ public class CustRegisterPage extends BasePage {
 	// =================================================
 	private By birthCountryLocator = By.xpath("//input[@aria-label='Birth Country']");
 	private By birthAddressNoneLocalCustomerLocator = By.name("birthAddressForNoneLocalCustomer");
-	private By birthDateInputLocator = By.cssSelector("input[data-testid='eng-date-picker']");
-	private By monthDropdownLocator = By.xpath("//select[@name='months']");
-	private By yearDropdownLocator = By.xpath("//select[@name='years']");
+	private By birthDateInputLocator = By.name("birthDateAD");
+	private By monthDropdownLocator = By.name("months");
+	private By yearDropdownLocator = By.name("years");
 
 	// =================================================
 	// Employment Locators
@@ -176,6 +179,7 @@ public class CustRegisterPage extends BasePage {
 
 	public void selectReligion(String religionValue) {
 		LoggerUtil.info("Selecting '" + religionValue + "' from Religion dropdown");
+		scrollToElement(religionLocator);
 		selectFromDropdown(religionLocator, religionValue);
 	}
 
@@ -203,6 +207,7 @@ public class CustRegisterPage extends BasePage {
 	// Birth Details Methods
 	// =================================================
 	public void selectBirthDate(String yearValue, String monthValue, String dayValue) {
+
 		LoggerUtil.info("Selecting Date of Birth - Year: " + yearValue +
 				", Month: " + monthValue + ", Day: " + dayValue);
 

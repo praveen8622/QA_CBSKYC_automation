@@ -45,7 +45,6 @@ public class CorporateCustRegWorkflow extends BaseCustRegWorkflow {
 
         // Select Legal Entities (This will show the Corporate Customer form)
         corpRegPage.chooseLegalStatus("Private Limited Company");
-        Thread.sleep(1000);
 
         // Fill Corporate Customer Details
         corpRegPage.enterCompanyName(companyName);
@@ -54,21 +53,12 @@ public class CorporateCustRegWorkflow extends BaseCustRegWorkflow {
 
         // Let's ensure Authority Remarks are tested, even if empty or simple text
         corpRegPage.enterAuthorityRemarks("Registered accurately");
-
-        Thread.sleep(1000);
         corpRegPage.selectRegisteredDate("2020", "March", "15");
-
-        Thread.sleep(1000);
         corpRegPage.selectOnboardingChannel("Physical");
         corpRegPage.selectObligor(obligor);
-        Thread.sleep(2000);
         corpRegPage.selectCountry("Nepal");
-        Thread.sleep(2000);
         corpRegPage.selectIsForeignResident(false);
         corpRegPage.selectTaxCategory("Natural Person");
-
-        Thread.sleep(2000);
         corpRegPage.clickProceedButton();
-        Thread.sleep(2000);
     }
 }

@@ -12,7 +12,7 @@ public class HomePage extends BasePage {
     // =================================================
     private By navCustregLocator = By.xpath("//p[normalize-space()='Customer Management']");
     private By custRegLocator = By.xpath("//p[normalize-space()='Customer Registration']");
-    private By titleTextLocator = By.xpath("//p[normalize-space()='Customer Registration List']");
+    private By buttonLocator = By.xpath("//button[@title='Add Customer Registration']");
     private By custScreeningLocator = By.xpath("//p[normalize-space()='Customer Screening']");
     private By titleScreeningPageSearchLocator = By.xpath("//label[normalize-space()='Search By:']");
 
@@ -32,7 +32,7 @@ public class HomePage extends BasePage {
     public void navigateToCustomerRegistration() {
         LoggerUtil.info("Clicking 'Customer Registration' submenu");
         click(custRegLocator);
-        assertElementVisible(titleTextLocator, "Customer Registration page not loaded successfully");
+        assertElementVisible(buttonLocator, "Customer Registration page not loaded successfully");
 
     }
 
