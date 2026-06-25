@@ -1,21 +1,31 @@
 package utilities;
 
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.FluentWait;
 
 public class WaitUtils {
-	private WebDriverWait wait;
+	private FluentWait<WebDriver> wait;
 
 	public WaitUtils(WebDriver driver) {
 		Properties prop = ConfigReader.getProperties();
 		int timeout = Integer.parseInt(System.getProperty("timeout",
 				prop.getProperty("timeout", "30")));
-		this.wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(timeout));
+				
+		this.wait = new FluentWait<>(driver)
+				.withTimeout(Duration.ofSeconds(timeout))
+				.pollingEvery(Duration.ofMillis(500))
+				.ignoring(NoSuchElementException.class)
+				.ignoring(StaleElementReferenceException.class)
+				.ignoring(ElementClickInterceptedException.class);
 	}
 
 	public WebElement waitForElementToBeClickable(By locator) {

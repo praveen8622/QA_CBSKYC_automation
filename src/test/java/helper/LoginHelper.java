@@ -14,7 +14,7 @@ public class LoginHelper {
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(username, password);
-        loginPage.handlePasswordChangePopupIfPresent();
+        // loginPage.handlePasswordChangePopupIfPresent();
 
         if (loginPage.waitForLoginSuccess()) {
             LoggerUtil.info("Login successful");
