@@ -1,4 +1,5 @@
-package pages;
+package pages.cust_reg;
+import pages.HomePage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

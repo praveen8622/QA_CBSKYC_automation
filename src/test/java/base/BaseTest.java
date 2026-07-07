@@ -23,11 +23,9 @@ public class BaseTest {
 		String baseUrl = prop.getProperty("baseUrl");
 
 		if (browser.equalsIgnoreCase("chrome")) {
-			// WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 
-			// WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else {
 			throw new IllegalArgumentException("Invalid browser name: " + browser);

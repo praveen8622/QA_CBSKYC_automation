@@ -83,7 +83,7 @@ public class BasePage {
 				} catch (InterruptedException ignored) {
 				}
 			} catch (Exception e) {
-				handleActionException("typeText", locator, e);
+				handleActionException("typeText", locator, e); 
 				return;
 			}
 		}
@@ -120,7 +120,7 @@ public class BasePage {
 	// ================================
 	protected void selectFromReactSelect(By containerLocator, By inputLocator, String value) {
 		int attempts = 0;
-		while (attempts < 3) {
+		while (attempts < 6) {
 			try {
 				WebElement container = wait.waitForElementToBeClickable(containerLocator);
 				container.click();
@@ -130,16 +130,12 @@ public class BasePage {
 				Thread.sleep(1000); // Wait for React dropdown to update
 				input.sendKeys(Keys.ENTER);
 				return;
-			} catch (StaleElementReferenceException
-					| ElementNotInteractableException e) {
+			} catch (StaleElementReferenceException | ElementNotInteractableException e) {
 				attempts++;
-				if (attempts == 3) {
+				if (attempts == 6) {
 					handleActionException("selectFromReactSelect", containerLocator, e);
 				}
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException ignored) {
-				}
+				try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
 			} catch (Exception e) {
 				handleActionException("selectFromReactSelect", containerLocator, e);
 				return;

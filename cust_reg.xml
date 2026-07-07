@@ -7,12 +7,17 @@
     </listeners>
     <test name="Individual Customer Registration">
         <classes>
-            <class name="tests.CusRegTest" />
+            <class name="tests.cust_reg.CusRegTest" />
         </classes>
     </test>
     <test name="Corporate Customer Registration">
         <classes>
-            <class name="tests.CorporateCustRegTest" />
+            <class name="tests.cust_reg.CorporateCustRegTest" />
+        </classes>
+    </test>
+    <test name="Customer Operational Status">
+        <classes>
+            <class name="tests.cust_operational_status.CustOperationalStatTest" />
         </classes>
     </test>
 </suite>

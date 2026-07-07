@@ -3,6 +3,7 @@ package workflows;
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 import pages.*;
+import pages.cust_reg.*;
 
 public class CorporateCustRegWorkflow extends BaseCustRegWorkflow {
 

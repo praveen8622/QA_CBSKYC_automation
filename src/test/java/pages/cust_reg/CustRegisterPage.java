@@ -1,4 +1,4 @@
-package pages;
+package pages.cust_reg;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;

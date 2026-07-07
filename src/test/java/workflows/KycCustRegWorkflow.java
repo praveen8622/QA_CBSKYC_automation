@@ -1,10 +1,9 @@
 package workflows;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 import pages.*;
+import pages.cust_reg.*;
 
 public class KycCustRegWorkflow extends BaseCustRegWorkflow {
     // Unique Pages for Individual Registration
@@ -63,7 +62,6 @@ public class KycCustRegWorkflow extends BaseCustRegWorkflow {
         reg.selectIsPEP(false, "Domestic pep");
         reg.selectGender("male");
         reg.selectOnboardingChannel("Physical");
-
         reg.selectMaritalStatus("Single");
         reg.selectReligion("Hindu");
         reg.selectEducation("Master’s Degree");

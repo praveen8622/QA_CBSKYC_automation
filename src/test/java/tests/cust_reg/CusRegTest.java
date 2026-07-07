@@ -1,4 +1,4 @@
-package tests;
+package tests.cust_reg;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
