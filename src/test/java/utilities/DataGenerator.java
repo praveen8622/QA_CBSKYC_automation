@@ -69,4 +69,11 @@ public class DataGenerator {
         return lastName;
     }
 
+    public static String generateRandomOccupation(){
+        String random  = faker.name().title();
+        // Remove any non-alphabetic characters
+        random = random.replaceAll("[^a-zA-Z]", "");
+        return random;
+    }
+
 }
