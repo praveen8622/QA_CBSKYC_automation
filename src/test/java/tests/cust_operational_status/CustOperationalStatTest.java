@@ -34,4 +34,15 @@ public class CustOperationalStatTest extends BaseTestSequential {
 
     }
 
+    @Test(priority = 2, description = "Verify Customer Operational Status")
+    public void verifyCustomerOperationalStatus_usingCode() {
+        homePage.navigateToCustomerOperationalStatus();
+        custoperational.enterCustomerCode("01397370");
+        custoperational.enterStatusName("Z");
+        custoperational.enterUpdateClause("testing case for customer operational status ");
+        custoperational.clickSaveButton();
+        softAssert.assertAll();
+
+    }
+
 }

@@ -9,17 +9,15 @@ import utilities.DataGenerator;
 public class Occupation_Setup extends BaseTestSequential {
 
     Occupation_SetupPage occupation;
-    String random_occupations =  DataGenerator.generateRandomOccupation();
+    String random_occupations = DataGenerator.generateRandomOccupation();
     String random_editOccupations = DataGenerator.generateRandomOccupation();
 
-
-
     @BeforeClass
-    public void pagesetup(){
+    public void pagesetup() {
         occupation = new Occupation_SetupPage(driver);
     }
 
-    @Test (priority = 1, description = "Verify Save Occupation Setup")
+    @Test(priority = 1, description = "Verify Save Occupation Setup")
     public void save_Occupation_Setup() throws InterruptedException {
         occupation.Go_to_OccupationSetUp_Page();
         occupation.Click_on_addOccupation();
@@ -39,11 +37,10 @@ public class Occupation_Setup extends BaseTestSequential {
     }
 
     @Test(priority = 3, description = "Verify Delete Occupation Setup")
-    public void delete_occupation_setup(){
+    public void delete_occupation_setup() {
         occupation.Delete_Occupation_Setup();
         occupation.delete_button();
 
     }
-
 
 }
