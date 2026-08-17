@@ -34,6 +34,7 @@ public class BasePage {
 	// Basic Actions
 	// ================================
 	protected void click(By locator) {
+		LoggerUtil.info("Clicking element: " + locator);
 		int attempts = 0;
 		while (attempts < 3) {
 			try {
@@ -64,6 +65,7 @@ public class BasePage {
 	}
 
 	protected void typeText(By locator, String text) {
+		LoggerUtil.info("Typing text '" + text + "' into element: " + locator);
 		int attempts = 0;
 		while (attempts < 3) {
 			try {
@@ -90,6 +92,7 @@ public class BasePage {
 	}
 
 	protected void selectFromDropdown(By locator, String value) {
+		LoggerUtil.info("Selecting '" + value + "' from dropdown: " + locator);
 
 		if (value == null || value.trim().isEmpty())
 			return;
@@ -119,6 +122,7 @@ public class BasePage {
 	// React-Select handler (STABLE)
 	// ================================
 	protected void selectFromReactSelect(By containerLocator, By inputLocator, String value) {
+		LoggerUtil.info("Selecting '" + value + "' from React-Select dropdown: " + containerLocator);
 		int attempts = 0;
 		while (attempts < 6) {
 			try {
@@ -144,6 +148,7 @@ public class BasePage {
 	}
 
 	protected void selectFromGenderDropdown(By locator, String value) {
+		LoggerUtil.info("Selecting gender '" + value + "' from dropdown: " + locator);
 		WebElement element = wait.waitForElementToBeClickable(locator);
 		element.click();
 		element.sendKeys(value);
@@ -197,6 +202,7 @@ public class BasePage {
 	// Checkbox handling
 	// ================================
 	protected void setCheckbox(By locator, boolean shouldBeChecked) {
+		LoggerUtil.info("Setting checkbox " + locator + " to " + shouldBeChecked);
 		try {
 			WebElement element = wait.waitForElementToBePresent(locator);
 			if (element.isSelected() != shouldBeChecked) {

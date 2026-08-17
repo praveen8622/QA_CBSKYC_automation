@@ -7,12 +7,18 @@ import utilities.LoggerUtil;
 
 public class CustScreeningPage extends BasePage {
 
+    private By newScreeningBtnLocator = By.xpath("//div[text()='New Screening']");
     private By nameInputLocator = By.name("name");
     private By searchBtnLocator = By.xpath("//button[@title='Search']");
     private By screeningIdLocator = By.xpath("//p[normalize-space()='Master Screening ID']/following::p[1]");
 
     public CustScreeningPage(WebDriver driver) {
         super(driver);
+    }
+
+    public void clickNewScreening() {
+        LoggerUtil.info("Clicking New Screening button");
+        click(newScreeningBtnLocator);
     }
 
     public void enterFullName(String name) {

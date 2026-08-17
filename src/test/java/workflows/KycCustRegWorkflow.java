@@ -39,8 +39,9 @@ public class KycCustRegWorkflow extends BaseCustRegWorkflow {
     // Unique Business Flows
     // ================================
 
-    public String getScreeningId(String fullName) throws InterruptedException {
+    public String getScreeningId(String fullName) {
         homePage.navigateToCustomerScreening();
+        custScreeningPage.clickNewScreening();
         custScreeningPage.enterFullName(fullName);
         custScreeningPage.clickSearch();
         return custScreeningPage.getScreeningId();
@@ -68,6 +69,7 @@ public class KycCustRegWorkflow extends BaseCustRegWorkflow {
         reg.selectMotherLanguage("Nepali");
         reg.selectPreferredCommunicationLanguage("Nepali");
         reg.selectTaxCategory("Natural Person");
+        Thread.sleep(2000);
         reg.clickNextButton();
     }
 

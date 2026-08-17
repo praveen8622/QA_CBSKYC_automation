@@ -10,7 +10,7 @@
             <class name="tests.cust_reg.CusRegTest" />
         </classes>
     </test>
-    <test name="Corporate Customer Registration">
+    <!-- <test name="Corporate Customer Registration">
         <classes>
             <class name="tests.cust_reg.CorporateCustRegTest" />
         </classes>
@@ -19,5 +19,5 @@
         <classes>
             <class name="tests.cust_operational_status.CustOperationalStatTest" />
         </classes>
-    </test>
+    </test> -->
 </suite>

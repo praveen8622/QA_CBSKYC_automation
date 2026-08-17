@@ -30,7 +30,7 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 1, description = "Verify Customer Registration")
 	public void verifyCustomerRegistration() throws InterruptedException {
-		LoggerUtil.info("Registration test started");
+		LoggerUtil.info("Customer Registration test started");
 
 		String firstName = DataGenerator.generateRandomfirstName();
 		String lastName = DataGenerator.generateRandomlastName();
